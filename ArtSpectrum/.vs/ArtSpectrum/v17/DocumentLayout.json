@@ -1,0 +1,352 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrumgithub\\artspectrum\\artspectrum\\artspectrum\\services\\implementation\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\services\\implementation\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrumgithub\\artspectrum\\artspectrum\\artspectrum\\validators\\updateuserrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\validators\\updateuserrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrumgithub\\artspectrum\\artspectrum\\artspectrum\\validators\\createuserrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\validators\\createuserrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrumgithub\\artspectrum\\artspectrum\\artspectrum\\filters\\actionfilters\\validaterequestmodelcustomfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\filters\\actionfilters\\validaterequestmodelcustomfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrumgithub\\artspectrum\\artspectrum\\artspectrum\\contracts\\request\\updateuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\contracts\\request\\updateuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrumgithub\\artspectrum\\artspectrum\\artspectrum\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrumgithub\\artspectrum\\artspectrum\\artspectrum\\services\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\services\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrumgithub\\artspectrum\\artspectrum\\artspectrum\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrumgithub\\artspectrum\\artspectrum\\artspectrum\\middlewares\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\middlewares\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrumgithub\\artspectrum\\artspectrum\\artspectrum\\exceptions\\conflictexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\exceptions\\conflictexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrumgithub\\artspectrum\\artspectrum\\artspectrum\\contracts\\request\\createuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\contracts\\request\\createuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrumgithub\\artspectrum\\artspectrum\\artspectrum\\controllers\\apicontrollerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\controllers\\apicontrollerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrumgithub\\artspectrum\\artspectrum\\artspectrum\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrumgithub\\artspectrum\\artspectrum\\artspectrum\\commons\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\commons\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrumgithub\\artspectrum\\artspectrum\\artspectrum\\exceptions\\requestvalidationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\exceptions\\requestvalidationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrumgithub\\artspectrum\\artspectrum\\artspectrum\\mappings\\imapfrom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\mappings\\imapfrom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrumgithub\\artspectrum\\artspectrum\\artspectrum\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrumgithub\\artspectrum\\artspectrum\\artspectrum\\dtos\\basedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\dtos\\basedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF796806-5C03-4B73-954B-DB0D6B1688C5}|ArtSpectrum.Repository\\ArtSpectrum.Repository.csproj|e:\\artspectrumgithub\\artspectrum\\artspectrum\\artspectrum.repository\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF796806-5C03-4B73-954B-DB0D6B1688C5}|ArtSpectrum.Repository\\ArtSpectrum.Repository.csproj|solutionrelative:artspectrum.repository\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrumgithub\\artspectrum\\artspectrum\\artspectrum\\policies\\slugifyparametertransformer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\policies\\slugifyparametertransformer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ValidateRequestModelCustomFilter.cs",
+              "DocumentMoniker": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Filters\\ActionFilters\\ValidateRequestModelCustomFilter.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Filters\\ActionFilters\\ValidateRequestModelCustomFilter.cs",
+              "ToolTip": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Filters\\ActionFilters\\ValidateRequestModelCustomFilter.cs",
+              "RelativeToolTip": "ArtSpectrum\\Filters\\ActionFilters\\ValidateRequestModelCustomFilter.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAEAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T06:35:23.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ExceptionMiddleware.cs",
+              "DocumentMoniker": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Middlewares\\ExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Middlewares\\ExceptionMiddleware.cs",
+              "ToolTip": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Middlewares\\ExceptionMiddleware.cs",
+              "RelativeToolTip": "ArtSpectrum\\Middlewares\\ExceptionMiddleware.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAgwCUAAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T07:06:04.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateUserRequestValidator.cs",
+              "DocumentMoniker": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Validators\\CreateUserRequestValidator.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Validators\\CreateUserRequestValidator.cs",
+              "ToolTip": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Validators\\CreateUserRequestValidator.cs",
+              "RelativeToolTip": "ArtSpectrum\\Validators\\CreateUserRequestValidator.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAmwB8AAABXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T17:40:29.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Services\\Implementation\\UserService.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Services\\Implementation\\UserService.cs",
+              "ToolTip": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Services\\Implementation\\UserService.cs",
+              "RelativeToolTip": "ArtSpectrum\\Services\\Implementation\\UserService.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAwCUAAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T08:00:34.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UpdateUserRequest.cs",
+              "DocumentMoniker": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Contracts\\Request\\UpdateUserRequest.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Contracts\\Request\\UpdateUserRequest.cs",
+              "ToolTip": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Contracts\\Request\\UpdateUserRequest.cs",
+              "RelativeToolTip": "ArtSpectrum\\Contracts\\Request\\UpdateUserRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T06:41:01.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UpdateUserRequestValidator.cs",
+              "DocumentMoniker": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Validators\\UpdateUserRequestValidator.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Validators\\UpdateUserRequestValidator.cs",
+              "ToolTip": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Validators\\UpdateUserRequestValidator.cs",
+              "RelativeToolTip": "ArtSpectrum\\Validators\\UpdateUserRequestValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T07:43:34.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Services\\Interface\\IUserService.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Services\\Interface\\IUserService.cs",
+              "ToolTip": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Services\\Interface\\IUserService.cs",
+              "RelativeToolTip": "ArtSpectrum\\Services\\Interface\\IUserService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T08:00:41.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Result.cs",
+              "DocumentMoniker": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Commons\\Result.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Commons\\Result.cs",
+              "ToolTip": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Commons\\Result.cs",
+              "RelativeToolTip": "ArtSpectrum\\Commons\\Result.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T08:31:11.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Program.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Program.cs",
+              "ToolTip": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Program.cs",
+              "RelativeToolTip": "ArtSpectrum\\Program.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAADoAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T07:33:30.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ConflictException.cs",
+              "DocumentMoniker": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Exceptions\\ConflictException.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Exceptions\\ConflictException.cs",
+              "ToolTip": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Exceptions\\ConflictException.cs",
+              "RelativeToolTip": "ArtSpectrum\\Exceptions\\ConflictException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T07:07:31.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Controllers\\UsersController.cs",
+              "ToolTip": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "ArtSpectrum\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAgwCsAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T17:41:23.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CreateUserRequest.cs",
+              "DocumentMoniker": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Contracts\\Request\\CreateUserRequest.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Contracts\\Request\\CreateUserRequest.cs",
+              "ToolTip": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Contracts\\Request\\CreateUserRequest.cs",
+              "RelativeToolTip": "ArtSpectrum\\Contracts\\Request\\CreateUserRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAiwAsAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T08:00:59.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApiControllerBase.cs",
+              "DocumentMoniker": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Controllers\\ApiControllerBase.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Controllers\\ApiControllerBase.cs",
+              "ToolTip": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Controllers\\ApiControllerBase.cs",
+              "RelativeToolTip": "ArtSpectrum\\Controllers\\ApiControllerBase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T13:57:59.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\DTOs\\UserDto.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\DTOs\\UserDto.cs",
+              "ToolTip": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\DTOs\\UserDto.cs",
+              "RelativeToolTip": "ArtSpectrum\\DTOs\\UserDto.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAIAywA8AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T08:47:41.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RequestValidationException.cs",
+              "DocumentMoniker": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Exceptions\\RequestValidationException.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Exceptions\\RequestValidationException.cs",
+              "ToolTip": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Exceptions\\RequestValidationException.cs",
+              "RelativeToolTip": "ArtSpectrum\\Exceptions\\RequestValidationException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T07:29:55.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IMapFrom.cs",
+              "DocumentMoniker": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Mappings\\IMapFrom.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Mappings\\IMapFrom.cs",
+              "ToolTip": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Mappings\\IMapFrom.cs",
+              "RelativeToolTip": "ArtSpectrum\\Mappings\\IMapFrom.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T08:45:10.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Mappings\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Mappings\\MappingProfile.cs",
+              "ToolTip": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Mappings\\MappingProfile.cs",
+              "RelativeToolTip": "ArtSpectrum\\Mappings\\MappingProfile.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAYwCcAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T08:41:48.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "BaseDto.cs",
+              "DocumentMoniker": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\DTOs\\BaseDto.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\DTOs\\BaseDto.cs",
+              "ToolTip": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\DTOs\\BaseDto.cs",
+              "RelativeToolTip": "ArtSpectrum\\DTOs\\BaseDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAYAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T13:57:49.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum.Repository\\Models\\User.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum.Repository\\Models\\User.cs",
+              "ToolTip": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum.Repository\\Models\\User.cs",
+              "RelativeToolTip": "ArtSpectrum.Repository\\Models\\User.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T14:25:24.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SlugifyParameterTransformer.cs",
+              "DocumentMoniker": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Policies\\SlugifyParameterTransformer.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Policies\\SlugifyParameterTransformer.cs",
+              "ToolTip": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\Policies\\SlugifyParameterTransformer.cs",
+              "RelativeToolTip": "ArtSpectrum\\Policies\\SlugifyParameterTransformer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T07:43:45.674Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

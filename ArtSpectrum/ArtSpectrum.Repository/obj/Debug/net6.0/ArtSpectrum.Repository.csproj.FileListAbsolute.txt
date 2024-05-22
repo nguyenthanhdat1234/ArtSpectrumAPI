@@ -1,0 +1,15 @@
+E:\ArtSpectrumGitHub\ArtSpectrum\ArtSpectrum\ArtSpectrum.Repository\obj\Debug\net6.0\ArtSpectrum.Repository.csproj.AssemblyReference.cache
+E:\ArtSpectrumGitHub\ArtSpectrum\ArtSpectrum\ArtSpectrum.Repository\obj\Debug\net6.0\ArtSpectrum.Repository.GeneratedMSBuildEditorConfig.editorconfig
+E:\ArtSpectrumGitHub\ArtSpectrum\ArtSpectrum\ArtSpectrum.Repository\obj\Debug\net6.0\ArtSpectrum.Repository.AssemblyInfoInputs.cache
+E:\ArtSpectrumGitHub\ArtSpectrum\ArtSpectrum\ArtSpectrum.Repository\obj\Debug\net6.0\ArtSpectrum.Repository.AssemblyInfo.cs
+E:\ArtSpectrumGitHub\ArtSpectrum\ArtSpectrum\ArtSpectrum.Repository\obj\Debug\net6.0\ArtSpectrum.Repository.csproj.CoreCompileInputs.cache
+E:\ArtSpectrumGitHub\ArtSpectrum\ArtSpectrum\ArtSpectrum.Repository\obj\Debug\net6.0\ArtSpectrum.Repository.sourcelink.json
+E:\ArtSpectrumGitHub\ArtSpectrum\ArtSpectrum\ArtSpectrum.Repository\bin\Debug\net6.0\ArtSpectrum.Repository.deps.json
+E:\ArtSpectrumGitHub\ArtSpectrum\ArtSpectrum\ArtSpectrum.Repository\bin\Debug\net6.0\ArtSpectrum.Repository.dll
+E:\ArtSpectrumGitHub\ArtSpectrum\ArtSpectrum\ArtSpectrum.Repository\bin\Debug\net6.0\ArtSpectrum.Repository.pdb
+E:\ArtSpectrumGitHub\ArtSpectrum\ArtSpectrum\ArtSpectrum.Repository\obj\Debug\net6.0\ArtSpectrum.Repository.dll
+E:\ArtSpectrumGitHub\ArtSpectrum\ArtSpectrum\ArtSpectrum.Repository\obj\Debug\net6.0\refint\ArtSpectrum.Repository.dll
+E:\ArtSpectrumGitHub\ArtSpectrum\ArtSpectrum\ArtSpectrum.Repository\obj\Debug\net6.0\ArtSpectrum.Repository.pdb
+E:\ArtSpectrumGitHub\ArtSpectrum\ArtSpectrum\ArtSpectrum.Repository\obj\Debug\net6.0\ref\ArtSpectrum.Repository.dll
+E:\ArtSpectrumGitHub\ArtSpectrum\ArtSpectrum\ArtSpectrum.Repository\bin\Debug\net6.0\ArtSpectrum.Repository.runtimeconfig.json
+E:\ArtSpectrumGitHub\ArtSpectrum\ArtSpectrum\ArtSpectrum.Repository\obj\Debug\net6.0\ArtSpectrum.Repository.genruntimeconfig.cache
