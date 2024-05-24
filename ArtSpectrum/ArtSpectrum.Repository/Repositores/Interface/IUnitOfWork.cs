@@ -1,4 +1,4 @@
-﻿using ArtSpectrum.Models;
+﻿using ArtSpectrum.Repository.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +10,8 @@ namespace ArtSpectrum.Repository.Repositores.Interface
     public interface IUnitOfWork
     {
         IBaseRepository<User> UserRepository { get; }
+
+        IBaseRepository<Artist> ArtistsRepository { get; }
         Task Commit(CancellationToken cancellationToken);
     }
 }

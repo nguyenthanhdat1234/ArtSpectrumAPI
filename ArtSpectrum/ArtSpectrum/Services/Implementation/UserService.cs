@@ -1,7 +1,7 @@
 ﻿using ArtSpectrum.Contracts.Request;
 using ArtSpectrum.DTOs;
 using ArtSpectrum.Exceptions;
-using ArtSpectrum.Models;
+using ArtSpectrum.Repository.Models;
 using ArtSpectrum.Repository.Repositores.Interface;
 using ArtSpectrum.Services.Interface;
 using AutoMapper;

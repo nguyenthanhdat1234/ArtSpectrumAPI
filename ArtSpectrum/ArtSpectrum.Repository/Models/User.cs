@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ArtSpectrum.Models
+namespace ArtSpectrum.Repository.Models
 {
     public partial class User
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace ArtSpectrum.Models
+namespace ArtSpectrum.Repository.Models
 {
     public partial class ArtSpectrumDBContext : DbContext
     {
@@ -41,6 +41,8 @@ namespace ArtSpectrum.Models
             modelBuilder.Entity<Artist>(entity =>
             {
                 entity.Property(e => e.ArtistId).HasColumnName("artist_id");
+
+                entity.Property(e => e.Approved).HasColumnName("approved");
 
                 entity.Property(e => e.Bio).HasColumnName("bio");
 
@@ -206,6 +208,12 @@ namespace ArtSpectrum.Models
                 entity.Property(e => e.Status)
                     .HasMaxLength(20)
                     .HasColumnName("status");
+
+                entity.HasOne(d => d.Order)
+                    .WithMany(p => p.Payments)
+                    .HasForeignKey(d => d.OrderId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Payments_Orders");
             });
 
             modelBuilder.Entity<Review>(entity =>

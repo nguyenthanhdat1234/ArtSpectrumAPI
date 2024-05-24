@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ArtSpectrum.Models
+namespace ArtSpectrum.Repository.Models
 {
     public partial class Payment
     {
@@ -11,5 +11,7 @@ namespace ArtSpectrum.Models
         public string? PaymentMethod { get; set; }
         public string? Status { get; set; }
         public int OrderId { get; set; }
+
+        public virtual Order Order { get; set; } = null!;
     }
 }
