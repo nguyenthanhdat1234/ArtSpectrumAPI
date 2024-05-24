@@ -1,4 +1,4 @@
-﻿using ArtSpectrum.Models;
+﻿using ArtSpectrum.Repository.Models;
 using ArtSpectrum.Repository.Repositores.Interface;
 using Microsoft.EntityFrameworkCore;
 using System;

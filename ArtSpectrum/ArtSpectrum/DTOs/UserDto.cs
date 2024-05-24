@@ -1,5 +1,5 @@
 ﻿using ArtSpectrum.Mappings;
-using ArtSpectrum.Models;
+using ArtSpectrum.Repository.Models;
 using AutoMapper;
 
 namespace ArtSpectrum.DTOs

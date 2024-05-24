@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ArtSpectrum.Models
+namespace ArtSpectrum.Repository.Models
 {
     public partial class Artist
     {
@@ -9,6 +9,7 @@ namespace ArtSpectrum.Models
         public int UserId { get; set; }
         public string? Bio { get; set; }
         public string? ProfilePicture { get; set; }
+        public bool? Approved { get; set; }
 
         public virtual User User { get; set; } = null!;
     }

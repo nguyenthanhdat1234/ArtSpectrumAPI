@@ -1,4 +1,4 @@
-﻿using ArtSpectrum.Models;
+﻿using ArtSpectrum.Repository.Models;
 using ArtSpectrum.Repository.Repositores.Interface;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -16,6 +16,7 @@ namespace ArtSpectrum.Repository.Repositores.Implementation
         internal ArtSpectrumDBContext Context => _context;
 
         private IBaseRepository<User>? _userRepository;
+        private IBaseRepository<Artist>? _artistRepository;
 
         public UnitOfWork(ArtSpectrumDBContext context)
         {
@@ -23,6 +24,8 @@ namespace ArtSpectrum.Repository.Repositores.Implementation
         }
 
         public IBaseRepository<User> UserRepository => _userRepository ??= new UserRepository(_context);
+
+        public IBaseRepository<Artist> ArtistsRepository => _artistRepository ??= new ArtistRepository(_context);
 
         public async Task Commit(CancellationToken cancellationToken)
         {

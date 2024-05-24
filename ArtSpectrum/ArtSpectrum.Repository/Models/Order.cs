@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ArtSpectrum.Models
+namespace ArtSpectrum.Repository.Models
 {
     public partial class Order
     {
         public Order()
         {
             OrderDetails = new HashSet<OrderDetail>();
+            Payments = new HashSet<Payment>();
         }
 
         public int OrderId { get; set; }
@@ -16,5 +17,6 @@ namespace ArtSpectrum.Models
         public int UserId { get; set; }
 
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+        public virtual ICollection<Payment> Payments { get; set; }
     }
 }
