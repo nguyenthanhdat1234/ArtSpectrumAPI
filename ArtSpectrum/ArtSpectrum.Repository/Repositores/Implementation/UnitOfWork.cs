@@ -17,6 +17,7 @@ namespace ArtSpectrum.Repository.Repositores.Implementation
 
         private IBaseRepository<User>? _userRepository;
         private IBaseRepository<Artist>? _artistRepository;
+        private IBaseRepository<Painting>? _paintingRepository;
 
         public UnitOfWork(ArtSpectrumDBContext context)
         {
@@ -26,6 +27,7 @@ namespace ArtSpectrum.Repository.Repositores.Implementation
         public IBaseRepository<User> UserRepository => _userRepository ??= new UserRepository(_context);
 
         public IBaseRepository<Artist> ArtistsRepository => _artistRepository ??= new ArtistRepository(_context);
+        public IBaseRepository<Painting> PaintingRepository => _paintingRepository ??= new PaintingRepository(_context);
 
         public async Task Commit(CancellationToken cancellationToken)
         {

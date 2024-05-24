@@ -12,6 +12,7 @@ namespace ArtSpectrum.Repository.Repositores.Interface
         IBaseRepository<User> UserRepository { get; }
 
         IBaseRepository<Artist> ArtistsRepository { get; }
+        IBaseRepository<Painting> PaintingRepository { get; }
         Task Commit(CancellationToken cancellationToken);
     }
 }
