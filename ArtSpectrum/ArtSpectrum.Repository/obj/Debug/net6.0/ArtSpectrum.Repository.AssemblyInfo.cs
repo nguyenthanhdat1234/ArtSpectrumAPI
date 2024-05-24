@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ArtSpectrum.Repository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a375b8213d6d362100a63e106c9e5c0b90332ded")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83986f00bb455262536325e984bee1b24795ed5b")]
 [assembly: System.Reflection.AssemblyProductAttribute("ArtSpectrum.Repository")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ArtSpectrum.Repository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
