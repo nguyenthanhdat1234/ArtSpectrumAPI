@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lBrIOQciay/FC0DUbvLaKC929dd+uQ9aEGgQD380GdmzbIoME7afL9ZKh3pa9cEl9QgXbHfhmZ+t2zcMmfCw2A==",
+  "dgSpecHash": "bRQDt1TO4UCpz2KhxO+R49ypUxo5tGiOWC6+4m5m/Nm7LgJOjs9k+Cmh5CcRkIKljj0km6Cc5rfJqlKNwFb6kg==",
   "success": true,
-  "projectFilePath": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum.csproj",
+  "projectFilePath": "E:\\NewGit\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gmt\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\gmt\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

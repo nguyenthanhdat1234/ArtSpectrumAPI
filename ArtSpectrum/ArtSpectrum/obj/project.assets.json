@@ -2494,11 +2494,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum.csproj",
+      "projectUniqueName": "E:\\NewGit\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum.csproj",
       "projectName": "ArtSpectrum",
-      "projectPath": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum.csproj",
+      "projectPath": "E:\\NewGit\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum.csproj",
       "packagesPath": "C:\\Users\\gmt\\.nuget\\packages\\",
-      "outputPath": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum\\obj\\",
+      "outputPath": "E:\\NewGit\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gmt\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2515,8 +2515,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum.Repository\\ArtSpectrum.Repository.csproj": {
-              "projectPath": "E:\\ArtSpectrumGitHub\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum.Repository\\ArtSpectrum.Repository.csproj"
+            "E:\\NewGit\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum.Repository\\ArtSpectrum.Repository.csproj": {
+              "projectPath": "E:\\NewGit\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum.Repository\\ArtSpectrum.Repository.csproj"
             }
           }
         }
