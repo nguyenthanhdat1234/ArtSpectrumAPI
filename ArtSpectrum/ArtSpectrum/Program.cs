@@ -50,6 +50,7 @@ builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddTransient<IBaseRepository<User>, UserRepository>();
 builder.Services.AddTransient<IBaseRepository<Artist>, ArtistRepository>();
 builder.Services.AddTransient<IBaseRepository<Painting>, PaintingRepository>();
+builder.Services.AddTransient<IBaseRepository<Sale>, SaleRepository>();
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 
 
@@ -57,6 +58,7 @@ builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IArtistService, ArtistService>();
 builder.Services.AddScoped<IPaintingService, PaintingService>();
+builder.Services.AddScoped<ISaleService, SaleService>();
 
 
 // Middlewares & Filters
