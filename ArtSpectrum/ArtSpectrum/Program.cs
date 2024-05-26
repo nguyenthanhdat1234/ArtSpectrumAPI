@@ -49,12 +49,18 @@ builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 // Add a implementation "Repositories"
 builder.Services.AddTransient<IBaseRepository<User>, UserRepository>();
 builder.Services.AddTransient<IBaseRepository<Artist>, ArtistRepository>();
+builder.Services.AddTransient<IBaseRepository<Painting>, PaintingRepository>();
+builder.Services.AddTransient<IBaseRepository<Sale>, SaleRepository>();
+builder.Services.AddTransient<IBaseRepository<Order>, OrderRepository>();
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 
 
 // Add a implement "Service"
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IArtistService, ArtistService>();
+builder.Services.AddScoped<IPaintingService, PaintingService>();
+builder.Services.AddScoped<ISaleService, SaleService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
 
 
 // Middlewares & Filters
