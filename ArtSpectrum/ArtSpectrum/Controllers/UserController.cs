@@ -8,12 +8,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ArtSpectrum.Controllers
 {
-    public class UsersController : ApiControllerBase
+    public class UserController : ApiControllerBase
     {
         private readonly IUserService _service;
         private IMapper _mapper;
 
-        public UsersController(IUserService service, IMapper mapper)
+        public UserController(IUserService service, IMapper mapper)
         {
             _service = service;
             _mapper = mapper;

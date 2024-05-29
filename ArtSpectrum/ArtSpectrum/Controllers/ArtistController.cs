@@ -8,11 +8,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ArtSpectrum.Controllers
 {
-    public class ArtistsController : ApiControllerBase
+    public class ArtistController : ApiControllerBase
     {
         private readonly IArtistService _service;
 
-        public ArtistsController(IArtistService service)
+        public ArtistController(IArtistService service)
         {
             _service = service;
         }
