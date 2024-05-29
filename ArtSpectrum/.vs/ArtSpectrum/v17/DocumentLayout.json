@@ -3,48 +3,36 @@
   "WorkspaceRootPath": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrum_git_project\\artspectrumapi\\artspectrum\\artspectrum\\dtos\\artistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\dtos\\artistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrum_git_project\\artspectrumapi\\artspectrum\\artspectrum\\services\\implementation\\orderdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\services\\implementation\\orderdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrum_git_project\\artspectrumapi\\artspectrum\\artspectrum\\contracts\\request\\createuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\contracts\\request\\createuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrum_git_project\\artspectrumapi\\artspectrum\\artspectrum\\services\\interface\\iorderdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\services\\interface\\iorderdetailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrum_git_project\\artspectrumapi\\artspectrum\\artspectrum\\controllers\\orderdetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\controllers\\orderdetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrum_git_project\\artspectrumapi\\artspectrum\\artspectrum\\dtos\\orderdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\dtos\\orderdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrum_git_project\\artspectrumapi\\artspectrum\\artspectrum\\dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrum_git_project\\artspectrumapi\\artspectrum\\artspectrum\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrum_git_project\\artspectrumapi\\artspectrum\\artspectrum\\controllers\\artistscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\controllers\\artistscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrum_git_project\\artspectrumapi\\artspectrum\\artspectrum\\controllers\\artistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\controllers\\artistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrum_git_project\\artspectrumapi\\artspectrum\\artspectrum\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrum_git_project\\artspectrumapi\\artspectrum\\artspectrum\\services\\implementation\\artistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\services\\implementation\\artistservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrum_git_project\\artspectrumapi\\artspectrum\\artspectrum\\contracts\\request\\updateartistrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\contracts\\request\\updateartistrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrum_git_project\\artspectrumapi\\artspectrum\\artspectrum\\contracts\\request\\createartistrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\contracts\\request\\createartistrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrum_git_project\\artspectrumapi\\artspectrum\\artspectrum\\services\\implementation\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\services\\implementation\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrum_git_project\\artspectrumapi\\artspectrum\\artspectrum\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrum_git_project\\artspectrumapi\\artspectrum\\artspectrum\\dtos\\basedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\dtos\\basedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|e:\\artspectrum_git_project\\artspectrumapi\\artspectrum\\artspectrum\\services\\implementation\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D3CC23-4679-474F-A21F-1F26ED6CF71C}|ArtSpectrum\\ArtSpectrum.csproj|solutionrelative:artspectrum\\services\\implementation\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,150 +42,110 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CreateUserRequest.cs",
-              "DocumentMoniker": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Contracts\\Request\\CreateUserRequest.cs",
-              "RelativeDocumentMoniker": "ArtSpectrum\\Contracts\\Request\\CreateUserRequest.cs",
-              "ToolTip": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Contracts\\Request\\CreateUserRequest.cs",
-              "RelativeToolTip": "ArtSpectrum\\Contracts\\Request\\CreateUserRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 6,
+              "Title": "ArtistController.cs",
+              "DocumentMoniker": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Controllers\\ArtistController.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Controllers\\ArtistController.cs",
+              "ToolTip": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Controllers\\ArtistController.cs",
+              "RelativeToolTip": "ArtSpectrum\\Controllers\\ArtistController.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAAADUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T08:47:26.275Z",
+              "WhenOpened": "2024-05-29T07:48:34.69Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Program.cs",
-              "RelativeDocumentMoniker": "ArtSpectrum\\Program.cs",
-              "ToolTip": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Program.cs",
-              "RelativeToolTip": "ArtSpectrum\\Program.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAAADgAAAA8AAAA",
+              "Title": "OrderDetailController.cs",
+              "DocumentMoniker": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Controllers\\OrderDetailController.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Controllers\\OrderDetailController.cs",
+              "ToolTip": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Controllers\\OrderDetailController.cs",
+              "RelativeToolTip": "ArtSpectrum\\Controllers\\OrderDetailController.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAgwCoAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T08:45:29.673Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "ArtSpectrum\\Controllers\\UsersController.cs",
-              "ToolTip": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "ArtSpectrum\\Controllers\\UsersController.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAowDcAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T08:39:53.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ArtistsController.cs",
-              "DocumentMoniker": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Controllers\\ArtistsController.cs",
-              "RelativeDocumentMoniker": "ArtSpectrum\\Controllers\\ArtistsController.cs",
-              "ToolTip": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Controllers\\ArtistsController.cs",
-              "RelativeToolTip": "ArtSpectrum\\Controllers\\ArtistsController.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAswDQAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T08:39:37.649Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UpdateArtistRequest.cs",
-              "DocumentMoniker": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Contracts\\Request\\UpdateArtistRequest.cs",
-              "RelativeDocumentMoniker": "ArtSpectrum\\Contracts\\Request\\UpdateArtistRequest.cs",
-              "ToolTip": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Contracts\\Request\\UpdateArtistRequest.cs",
-              "RelativeToolTip": "ArtSpectrum\\Contracts\\Request\\UpdateArtistRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T08:37:42.156Z",
+              "WhenOpened": "2024-05-29T07:31:38.294Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ArtistDto.cs",
-              "DocumentMoniker": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\DTOs\\ArtistDto.cs",
-              "RelativeDocumentMoniker": "ArtSpectrum\\DTOs\\ArtistDto.cs",
-              "ToolTip": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\DTOs\\ArtistDto.cs*",
-              "RelativeToolTip": "ArtSpectrum\\DTOs\\ArtistDto.cs*",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAA0AAAA",
+              "Title": "OrderDetailService.cs",
+              "DocumentMoniker": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Services\\Implementation\\OrderDetailService.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Services\\Implementation\\OrderDetailService.cs",
+              "ToolTip": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Services\\Implementation\\OrderDetailService.cs",
+              "RelativeToolTip": "ArtSpectrum\\Services\\Implementation\\OrderDetailService.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAcwE0AAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T08:30:49.285Z",
+              "WhenOpened": "2024-05-27T03:52:04.747Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CreateArtistRequest.cs",
-              "DocumentMoniker": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Contracts\\Request\\CreateArtistRequest.cs",
-              "RelativeDocumentMoniker": "ArtSpectrum\\Contracts\\Request\\CreateArtistRequest.cs",
-              "ToolTip": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Contracts\\Request\\CreateArtistRequest.cs",
-              "RelativeToolTip": "ArtSpectrum\\Contracts\\Request\\CreateArtistRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAHAAAA",
+              "DocumentIndex": 1,
+              "Title": "IOrderDetailService.cs",
+              "DocumentMoniker": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Services\\Interface\\IOrderDetailService.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Services\\Interface\\IOrderDetailService.cs",
+              "ToolTip": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Services\\Interface\\IOrderDetailService.cs",
+              "RelativeToolTip": "ArtSpectrum\\Services\\Interface\\IOrderDetailService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T08:37:36.968Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BaseDto.cs",
-              "DocumentMoniker": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\DTOs\\BaseDto.cs",
-              "RelativeDocumentMoniker": "ArtSpectrum\\DTOs\\BaseDto.cs",
-              "ToolTip": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\DTOs\\BaseDto.cs",
-              "RelativeToolTip": "ArtSpectrum\\DTOs\\BaseDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T08:31:22.626Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\DTOs\\UserDto.cs",
-              "RelativeDocumentMoniker": "ArtSpectrum\\DTOs\\UserDto.cs",
-              "ToolTip": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\DTOs\\UserDto.cs",
-              "RelativeToolTip": "ArtSpectrum\\DTOs\\UserDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T08:31:20.146Z",
+              "WhenOpened": "2024-05-27T04:34:52.601Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ArtistService.cs",
-              "DocumentMoniker": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Services\\Implementation\\ArtistService.cs",
-              "RelativeDocumentMoniker": "ArtSpectrum\\Services\\Implementation\\ArtistService.cs",
-              "ToolTip": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Services\\Implementation\\ArtistService.cs",
-              "RelativeToolTip": "ArtSpectrum\\Services\\Implementation\\ArtistService.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAwwGMAAAAyAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Program.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Program.cs",
+              "ToolTip": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Program.cs",
+              "RelativeToolTip": "ArtSpectrum\\Program.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAEAAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-24T08:25:35.265Z",
+              "WhenOpened": "2024-05-29T08:40:21.685Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Services\\Implementation\\UserService.cs",
-              "RelativeDocumentMoniker": "ArtSpectrum\\Services\\Implementation\\UserService.cs",
-              "ToolTip": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Services\\Implementation\\UserService.cs",
-              "RelativeToolTip": "ArtSpectrum\\Services\\Implementation\\UserService.cs",
-              "ViewState": "AQIAAHAAAAAAAAAAAAAnwHIAAAAuAAAA",
+              "DocumentIndex": 3,
+              "Title": "OrderDetailDto.cs",
+              "DocumentMoniker": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\DTOs\\OrderDetailDto.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\DTOs\\OrderDetailDto.cs",
+              "ToolTip": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\DTOs\\OrderDetailDto.cs",
+              "RelativeToolTip": "ArtSpectrum\\DTOs\\OrderDetailDto.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAgAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T08:00:34.999Z",
+              "WhenOpened": "2024-05-29T09:09:33.005Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderDto.cs",
+              "DocumentMoniker": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\DTOs\\OrderDto.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\DTOs\\OrderDto.cs",
+              "ToolTip": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\DTOs\\OrderDto.cs",
+              "RelativeToolTip": "ArtSpectrum\\DTOs\\OrderDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T09:09:30.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Services\\Implementation\\OrderService.cs",
+              "RelativeDocumentMoniker": "ArtSpectrum\\Services\\Implementation\\OrderService.cs",
+              "ToolTip": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\Services\\Implementation\\OrderService.cs",
+              "RelativeToolTip": "ArtSpectrum\\Services\\Implementation\\OrderService.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAowE0AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T04:14:30.383Z"
             }
           ]
         }

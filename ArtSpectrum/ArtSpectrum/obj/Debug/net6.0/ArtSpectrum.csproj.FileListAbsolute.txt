@@ -358,3 +358,4 @@ E:\EXE201\ArtSpectrumAPI\ArtSpectrum\ArtSpectrum\obj\Debug\net6.0\refint\ArtSpec
 E:\EXE201\ArtSpectrumAPI\ArtSpectrum\ArtSpectrum\obj\Debug\net6.0\ArtSpectrum.pdb
 E:\EXE201\ArtSpectrumAPI\ArtSpectrum\ArtSpectrum\obj\Debug\net6.0\ArtSpectrum.genruntimeconfig.cache
 E:\EXE201\ArtSpectrumAPI\ArtSpectrum\ArtSpectrum\obj\Debug\net6.0\ref\ArtSpectrum.dll
+E:\ArtSpectrum_Git_Project\ArtSpectrumAPI\ArtSpectrum\ArtSpectrum\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
