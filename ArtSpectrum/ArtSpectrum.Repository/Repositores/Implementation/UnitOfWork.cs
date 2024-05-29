@@ -21,6 +21,7 @@ namespace ArtSpectrum.Repository.Repositores.Implementation
         private IBaseRepository<Sale>? _saleRepository;
         private IBaseRepository<Order>? _orderRepository;
         private IBaseRepository<OrderDetail>? _orderDetailRepository;
+        private IBaseRepository<Cart>? _cartRepository;
 
         public UnitOfWork(ArtSpectrumDBContext context)
         {
@@ -35,6 +36,8 @@ namespace ArtSpectrum.Repository.Repositores.Implementation
         public IBaseRepository<Order> OrderRepository => _orderRepository ??= new OrderRepository(_context);
 
         public IBaseRepository<OrderDetail> OrderDetailRepository => _orderDetailRepository ??= new OrderDetailRepository(_context);
+
+        public IBaseRepository<Cart> CartRepository => _cartRepository ??= new CartRepository(_context);
 
         public async Task Commit(CancellationToken cancellationToken)
         {
