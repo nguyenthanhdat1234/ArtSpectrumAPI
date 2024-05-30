@@ -2858,19 +2858,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gmt\\.nuget\\packages\\": {}
+    "C:\\Users\\tranb\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum.csproj",
+      "projectUniqueName": "E:\\EXE201.2\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum.csproj",
       "projectName": "ArtSpectrum",
-      "projectPath": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum.csproj",
-      "packagesPath": "C:\\Users\\gmt\\.nuget\\packages\\",
-      "outputPath": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\obj\\",
+      "projectPath": "E:\\EXE201.2\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\ArtSpectrum.csproj",
+      "packagesPath": "C:\\Users\\tranb\\.nuget\\packages\\",
+      "outputPath": "E:\\EXE201.2\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\gmt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tranb\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2878,14 +2878,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum.Repository\\ArtSpectrum.Repository.csproj": {
-              "projectPath": "E:\\ArtSpectrum_Git_Project\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum.Repository\\ArtSpectrum.Repository.csproj"
+            "E:\\EXE201.2\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum.Repository\\ArtSpectrum.Repository.csproj": {
+              "projectPath": "E:\\EXE201.2\\ArtSpectrumAPI\\ArtSpectrum\\ArtSpectrum.Repository\\ArtSpectrum.Repository.csproj"
             }
           }
         }
@@ -2894,11 +2895,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2945,7 +2941,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
