@@ -54,6 +54,8 @@ builder.Services.AddTransient<IBaseRepository<Sale>, SaleRepository>();
 builder.Services.AddTransient<IBaseRepository<Order>, OrderRepository>();
 builder.Services.AddTransient<IBaseRepository<OrderDetail>, OrderDetailRepository>();
 builder.Services.AddTransient<IBaseRepository<Cart>, CartRepository>();
+builder.Services.AddTransient<IBaseRepository<Review>, ReviewRepository>();
+builder.Services.AddTransient<IBaseRepository<Category>, CategoryRepository>();
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 
 
@@ -65,6 +67,8 @@ builder.Services.AddScoped<ISaleService, SaleService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IOrderDetailService, OrderDetailService>();
 builder.Services.AddTransient<ICartService, CartService>();
+builder.Services.AddScoped<IReviewService, ReviewService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 
 // Middlewares & Filters

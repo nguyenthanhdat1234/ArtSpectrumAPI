@@ -16,8 +16,10 @@ namespace ArtSpectrum.Repository.Repositores.Interface
         IBaseRepository<Sale> SaleRepository { get; }
         IBaseRepository<Order> OrderRepository { get; }
         IBaseRepository<OrderDetail> OrderDetailRepository { get; }
-
         IBaseRepository<Cart> CartRepository { get; }
+        IBaseRepository<Review> ReviewRepository { get; }
+        IBaseRepository<Category> CategoryRepository { get; }
+
         Task Commit(CancellationToken cancellationToken);
     }
 }
