@@ -1,4 +1,6 @@
-﻿namespace ArtSpectrum.Contracts.Request
+﻿using ArtSpectrum.Repository.Models;
+
+namespace ArtSpectrum.Contracts.Request
 {
     public class CreatePaintingRequest
     {
@@ -10,5 +12,6 @@
         public double? SalesPrice { get; set; }
         public int SaleId { get; set; }
         public int ArtistsId { get; set; }
+
     }
 }

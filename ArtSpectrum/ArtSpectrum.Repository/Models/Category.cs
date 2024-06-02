@@ -7,12 +7,12 @@ namespace ArtSpectrum.Repository.Models
     {
         public Category()
         {
-            Paintings = new HashSet<Painting>();
+            PaintingCategories = new HashSet<PaintingCategory>();
         }
 
         public int CategoryId { get; set; }
         public string CategoryName { get; set; } = null!;
 
-        public virtual ICollection<Painting> Paintings { get; set; }
+        public virtual ICollection<PaintingCategory> PaintingCategories { get; set; }
     }
 }

@@ -44,8 +44,9 @@ namespace ArtSpectrum.Services.Implementation
                 StockQuantity = request.StockQuantity,
                 ImageUrl = request.ImageUrl,
                 SalesPrice = request.SalesPrice,
-                
+
             };
+            
             var result = await _uow.PaintingRepository.AddAsync(paintingEntity);
             await _uow.Commit(cancellationToken);
             return _mapper.Map<PaintingDto>(result);

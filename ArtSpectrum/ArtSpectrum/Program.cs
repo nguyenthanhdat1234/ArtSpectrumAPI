@@ -56,6 +56,7 @@ builder.Services.AddTransient<IBaseRepository<OrderDetail>, OrderDetailRepositor
 builder.Services.AddTransient<IBaseRepository<Cart>, CartRepository>();
 builder.Services.AddTransient<IBaseRepository<Review>, ReviewRepository>();
 builder.Services.AddTransient<IBaseRepository<Category>, CategoryRepository>();
+builder.Services.AddTransient<IBaseRepository<PaintingCategory>, PaintingCategoryRepository>();
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 
 
@@ -69,6 +70,7 @@ builder.Services.AddScoped<IOrderDetailService, OrderDetailService>();
 builder.Services.AddTransient<ICartService, CartService>();
 builder.Services.AddScoped<IReviewService, ReviewService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IPaintingCategoryService, PaintingCategoryService>();
 
 
 // Middlewares & Filters
