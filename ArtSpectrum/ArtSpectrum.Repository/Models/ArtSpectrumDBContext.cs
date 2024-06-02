@@ -22,6 +22,7 @@ namespace ArtSpectrum.Repository.Models
         public virtual DbSet<Order> Orders { get; set; } = null!;
         public virtual DbSet<OrderDetail> OrderDetails { get; set; } = null!;
         public virtual DbSet<Painting> Paintings { get; set; } = null!;
+        public virtual DbSet<PaintingCategory> PaintingCategories { get; set; } = null!;
         public virtual DbSet<Payment> Payments { get; set; } = null!;
         public virtual DbSet<Review> Reviews { get; set; } = null!;
         public virtual DbSet<Sale> Sales { get; set; } = null!;
@@ -29,11 +30,11 @@ namespace ArtSpectrum.Repository.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            /*if (!optionsBuilder.IsConfigured)
+            if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-HHD16EI;Initial Catalog=ArtSpectrumDB;Integrated Security=True;Trust Server Certificate=True");
-            }*/
+                optionsBuilder.UseSqlServer("Data Source=(local);Initial Catalog=ArtSpectrumDB;Integrated Security=True;Trust Server Certificate=True");
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -168,23 +169,19 @@ namespace ArtSpectrum.Repository.Models
                     .HasForeignKey(d => d.SaleId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Paintings_Sales");
+            });
 
-                entity.HasMany(d => d.Categories)
-                    .WithMany(p => p.Paintings)
-                    .UsingEntity<Dictionary<string, object>>(
-                        "PaintingCategory",
-                        l => l.HasOne<Category>().WithMany().HasForeignKey("CategoryId").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_PaintingCategories_Categories"),
-                        r => r.HasOne<Painting>().WithMany().HasForeignKey("PaintingId").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK_PaintingCategories_Paintings"),
-                        j =>
-                        {
-                            j.HasKey("PaintingId", "CategoryId").HasName("PK__Painting__A3977AB4A0E08AED");
+            modelBuilder.Entity<PaintingCategory>(entity =>
+            {
+                entity.HasOne(d => d.Category)
+                    .WithMany(p => p.PaintingCategories)
+                    .HasForeignKey(d => d.CategoryId)
+                    .HasConstraintName("FK__PaintingC__Categ__5165187F");
 
-                            j.ToTable("PaintingCategories");
-
-                            j.IndexerProperty<int>("PaintingId").HasColumnName("painting_id");
-
-                            j.IndexerProperty<int>("CategoryId").HasColumnName("category_id");
-                        });
+                entity.HasOne(d => d.Painting)
+                    .WithMany(p => p.PaintingCategories)
+                    .HasForeignKey(d => d.PaintingId)
+                    .HasConstraintName("FK__PaintingC__Paint__52593CB8");
             });
 
             modelBuilder.Entity<Payment>(entity =>

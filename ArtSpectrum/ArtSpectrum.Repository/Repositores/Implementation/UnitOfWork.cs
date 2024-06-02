@@ -24,6 +24,7 @@ namespace ArtSpectrum.Repository.Repositores.Implementation
         private IBaseRepository<Cart>? _cartRepository;
         private IBaseRepository<Review>? _reviewRepository;
         private IBaseRepository<Category>? _categoryRepository;
+        private IBaseRepository<PaintingCategory>? _paintingCategoryRepository;
 
         public UnitOfWork(ArtSpectrumDBContext context)
         {
@@ -42,6 +43,7 @@ namespace ArtSpectrum.Repository.Repositores.Implementation
         public IBaseRepository<Cart> CartRepository => _cartRepository ??= new CartRepository(_context);
         public IBaseRepository<Review> ReviewRepository => _reviewRepository ??= new ReviewRepository(_context);
         public IBaseRepository<Category> CategoryRepository => _categoryRepository ??= new CategoryRepository(_context);
+        public IBaseRepository<PaintingCategory> PaintingCategoryRepository => _paintingCategoryRepository ??= new PaintingCategoryRepository(_context);
 
 
 

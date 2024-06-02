@@ -9,8 +9,8 @@ namespace ArtSpectrum.Repository.Models
         {
             Carts = new HashSet<Cart>();
             OrderDetails = new HashSet<OrderDetail>();
+            PaintingCategories = new HashSet<PaintingCategory>();
             Reviews = new HashSet<Review>();
-            Categories = new HashSet<Category>();
         }
 
         public int PaintingId { get; set; }
@@ -26,8 +26,7 @@ namespace ArtSpectrum.Repository.Models
         public virtual Sale Sale { get; set; } = null!;
         public virtual ICollection<Cart> Carts { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+        public virtual ICollection<PaintingCategory> PaintingCategories { get; set; }
         public virtual ICollection<Review> Reviews { get; set; }
-
-        public virtual ICollection<Category> Categories { get; set; }
     }
 }
