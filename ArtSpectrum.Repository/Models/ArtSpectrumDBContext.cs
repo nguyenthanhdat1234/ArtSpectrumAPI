@@ -30,11 +30,11 @@ namespace ArtSpectrum.Repository.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-/*            if (!optionsBuilder.IsConfigured)
+            if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseSqlServer("Data Source=(local);Initial Catalog=ArtSpectrumDB;Integrated Security=True;Trust Server Certificate=True");
-            }*/
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -150,9 +150,7 @@ namespace ArtSpectrum.Repository.Models
                     .HasMaxLength(255)
                     .HasColumnName("image_url");
 
-                entity.Property(e => e.Price)
-                    .HasColumnType("decimal(10, 2)")
-                    .HasColumnName("price");
+                entity.Property(e => e.Price).HasColumnName("price");
 
                 entity.Property(e => e.SaleId).HasColumnName("sale_id");
 
@@ -176,12 +174,12 @@ namespace ArtSpectrum.Repository.Models
                 entity.HasOne(d => d.Category)
                     .WithMany(p => p.PaintingCategories)
                     .HasForeignKey(d => d.CategoryId)
-                    .HasConstraintName("FK__PaintingC__Categ__5165187F");
+                    .HasConstraintName("FK__PaintingC__Categ__14270015");
 
                 entity.HasOne(d => d.Painting)
                     .WithMany(p => p.PaintingCategories)
                     .HasForeignKey(d => d.PaintingId)
-                    .HasConstraintName("FK__PaintingC__Paint__52593CB8");
+                    .HasConstraintName("FK__PaintingC__Paint__1332DBDC");
             });
 
             modelBuilder.Entity<Payment>(entity =>
@@ -254,9 +252,7 @@ namespace ArtSpectrum.Repository.Models
                     .HasColumnType("datetime")
                     .HasColumnName("start_time_sales");
 
-                entity.Property(e => e.VoucherDiscount)
-                    .HasColumnType("decimal(10, 2)")
-                    .HasColumnName("voucher_discount");
+                entity.Property(e => e.VoucherDiscount).HasColumnName("voucher_discount");
 
                 entity.Property(e => e.VoucherName)
                     .HasMaxLength(100)

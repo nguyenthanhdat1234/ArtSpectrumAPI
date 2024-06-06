@@ -33,7 +33,7 @@ namespace ArtSpectrum.Services.Implementation
                 throw new RequestValidationException(validation.Errors);
             }
             var painting = await _uow.PaintingRepository.FirstOrDefaultAsync(x => x.ArtistsId == request.ArtistsId, cancellationToken);
-           
+
             var paintingEntity = new Painting()
             {
                 ArtistsId = request.ArtistsId,
@@ -43,10 +43,9 @@ namespace ArtSpectrum.Services.Implementation
                 Price = request.Price,
                 StockQuantity = request.StockQuantity,
                 ImageUrl = request.ImageUrl,
-                SalesPrice = request.SalesPrice,
-
+                SalesPrice = request.SalesPrice ?? 0,
             };
-            
+
             var result = await _uow.PaintingRepository.AddAsync(paintingEntity);
             await _uow.Commit(cancellationToken);
             return _mapper.Map<PaintingDto>(result);
@@ -103,7 +102,7 @@ namespace ArtSpectrum.Services.Implementation
             painting.Price = request.Price;
             painting.StockQuantity = request.StockQuantity;
             painting.ImageUrl = request.ImageUrl;
-            painting.SalesPrice = request.SalesPrice;
+            painting.SalesPrice = request.SalesPrice ?? 0;
 
             _uow.PaintingRepository.Update(painting);
             await _uow.Commit(cancellationToken);

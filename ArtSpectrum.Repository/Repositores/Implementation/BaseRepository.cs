@@ -55,5 +55,10 @@ namespace ArtSpectrum.Repository.Repositores.Implementation
             _context.Set<T>().RemoveRange(entities);
         }
 
+        public virtual async Task<IEnumerable<T>> WhereAsync(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken = default)
+        {
+            return await _context.Set<T>().Where(predicate).ToListAsync(cancellationToken);
+        }
+
     }
 }

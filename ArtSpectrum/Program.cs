@@ -17,6 +17,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddHttpClient();
 builder.Services.AddDbContext<ArtSpectrumDBContext>(options =>
        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -70,6 +71,7 @@ builder.Services.AddTransient<ICartService, CartService>();
 builder.Services.AddScoped<IReviewService, ReviewService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IPaintingCategoryService, PaintingCategoryService>();
+builder.Services.AddScoped<IPaymentService, PaymentService>();
 
 
 // Middlewares & Filters

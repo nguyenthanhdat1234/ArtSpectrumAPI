@@ -15,6 +15,7 @@ namespace ArtSpectrum.Repository.Repositores.Interface
         Task<T> AddAsync(T obj, CancellationToken cancellationToken = default);
         T Update(T obj);
         T Delete(T obj);
+        Task<IEnumerable<T>> WhereAsync(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken = default);
         void RemoveRange(params T[] entities);
     }
 
