@@ -14,7 +14,6 @@ using ArtSpectrum.Services.Interface;
 using ArtSpectrum.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
-
 // Add services to the container.
 
 builder.Services.AddControllers();
