@@ -21,7 +21,7 @@ namespace ArtSpectrum.Services.Implementation
         {
             var saleEntity = new Sale()
             {
-                VoucherDiscount = request.VoucherDiscount,
+                VoucherDiscount = request.VoucherDiscount ?? 0,
                 StartTimeSales = request.StartTimeSales,
                 EndTimeSales = request.EndTimeSales,
                 VoucherName = request.VoucherName,
@@ -70,7 +70,7 @@ namespace ArtSpectrum.Services.Implementation
             {
                 throw new KeyNotFoundException("Sale not found. ");
             }
-            sale.VoucherDiscount = request.VoucherDiscount;
+            sale.VoucherDiscount = request.VoucherDiscount ?? 0;
             sale.StartTimeSales = request.StartTimeSales;
             sale.EndTimeSales = request.EndTimeSales;
             sale.VoucherName = request.VoucherName;

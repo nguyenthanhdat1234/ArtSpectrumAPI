@@ -11,10 +11,10 @@ namespace ArtSpectrum.Repository.Models
         }
 
         public int SaleId { get; set; }
-        public decimal? VoucherDiscount { get; set; }
         public DateTime? StartTimeSales { get; set; }
         public DateTime? EndTimeSales { get; set; }
         public string? VoucherName { get; set; }
+        public int VoucherDiscount { get; set; }
 
         public virtual ICollection<Painting> Paintings { get; set; }
     }
