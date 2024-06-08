@@ -1,4 +1,6 @@
-﻿using AutoMapper;
+﻿using ArtSpectrum.DTOs;
+using ArtSpectrum.Repository.Models;
+using AutoMapper;
 using System.Reflection;
 
 namespace ArtSpectrum.Mappings
@@ -8,6 +10,9 @@ namespace ArtSpectrum.Mappings
         public MappingProfile()
         {
             ApplyMappingsFromAssembly(Assembly.GetExecutingAssembly());
+            CreateMap<LoginDto, User>()
+            .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
+            .ForMember(dest => dest.Password, opt => opt.MapFrom(src => src.Password));
         }
 
         private void ApplyMappingsFromAssembly(Assembly assembly)

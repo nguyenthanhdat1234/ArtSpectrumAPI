@@ -12,6 +12,11 @@ using ArtSpectrum.Repository.Repositores.Implementation;
 using ArtSpectrum.Services.Implementation;
 using ArtSpectrum.Services.Interface;
 using ArtSpectrum.Middlewares;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.Extensions.Configuration;
+using System.Text;
+using ArtSpectrum.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
@@ -20,6 +25,24 @@ builder.Services.AddControllers();
 builder.Services.AddHttpClient();
 builder.Services.AddDbContext<ArtSpectrumDBContext>(options =>
        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// REGISTER a JWT authentication 
+builder.Services.AddScoped<GenerateJwtTokenFilter>();
+
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+    };
+});
 
 
 //Add Validation && not use "ModelStateInvalidFilter"
@@ -46,6 +69,8 @@ builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
+
+builder.Services.AddTransient<GenerateJSONWebTokenHelper>();
 // Add a implementation "Repositories"
 builder.Services.AddTransient<IBaseRepository<User>, UserRepository>();
 builder.Services.AddTransient<IBaseRepository<Artist>, ArtistRepository>();
@@ -72,6 +97,7 @@ builder.Services.AddScoped<IReviewService, ReviewService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IPaintingCategoryService, PaintingCategoryService>();
 builder.Services.AddScoped<IPaymentService, PaymentService>();
+builder.Services.AddScoped<ILoginService, LoginService>();
 
 
 // Middlewares & Filters
@@ -112,7 +138,7 @@ app.UseCors();
 app.UseHttpsRedirection();
 
 app.UseMiddleware<ExceptionMiddleware>();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
