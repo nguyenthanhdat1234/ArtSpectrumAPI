@@ -20,6 +20,7 @@ namespace ArtSpectrum.Repository.Repositores.Interface
         IBaseRepository<Review> ReviewRepository { get; }
         IBaseRepository<Category> CategoryRepository { get; }
         IBaseRepository<PaintingCategory> PaintingCategoryRepository { get; }
+        IBaseRepository<Blog> BlogRepository { get; }
 
         Task Commit(CancellationToken cancellationToken);
     }

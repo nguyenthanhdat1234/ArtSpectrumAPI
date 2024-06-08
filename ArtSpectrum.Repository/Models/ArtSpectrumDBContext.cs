@@ -17,6 +17,7 @@ namespace ArtSpectrum.Repository.Models
         }
 
         public virtual DbSet<Artist> Artists { get; set; } = null!;
+        public virtual DbSet<Blog> Blogs { get; set; } = null!;
         public virtual DbSet<Cart> Carts { get; set; } = null!;
         public virtual DbSet<Category> Categories { get; set; } = null!;
         public virtual DbSet<Order> Orders { get; set; } = null!;
@@ -30,11 +31,11 @@ namespace ArtSpectrum.Repository.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-/*            if (!optionsBuilder.IsConfigured)
+            if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=(local);Initial Catalog=ArtSpectrumDB;Integrated Security=True;Trust Server Certificate=True");
-            }*/
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-HHD16EI;Initial Catalog=ArtSpectrumDB;Integrated Security=True;Trust Server Certificate=True");
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -58,6 +59,32 @@ namespace ArtSpectrum.Repository.Models
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Artists_Users");
+            });
+
+            modelBuilder.Entity<Blog>(entity =>
+            {
+                entity.Property(e => e.BlogId).HasColumnName("blog_id");
+
+                entity.Property(e => e.ArtistId).HasColumnName("artistId");
+
+                entity.Property(e => e.DescriptionBlog)
+                    .HasColumnType("text")
+                    .HasColumnName("description_blog");
+
+                entity.Property(e => e.ImgBlog)
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("img_blog");
+
+                entity.Property(e => e.TiteBlog)
+                    .HasMaxLength(100)
+                    .HasColumnName("tite_blog");
+
+                entity.HasOne(d => d.Artist)
+                    .WithMany(p => p.Blogs)
+                    .HasForeignKey(d => d.ArtistId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__Blogs__artistId__19DFD96B");
             });
 
             modelBuilder.Entity<Cart>(entity =>

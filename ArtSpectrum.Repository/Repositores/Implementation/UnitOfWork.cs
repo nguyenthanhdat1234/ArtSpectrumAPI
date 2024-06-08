@@ -25,6 +25,7 @@ namespace ArtSpectrum.Repository.Repositores.Implementation
         private IBaseRepository<Review>? _reviewRepository;
         private IBaseRepository<Category>? _categoryRepository;
         private IBaseRepository<PaintingCategory>? _paintingCategoryRepository;
+        private IBaseRepository<Blog>? _blogRepository;
 
         public UnitOfWork(ArtSpectrumDBContext context)
         {
@@ -44,6 +45,8 @@ namespace ArtSpectrum.Repository.Repositores.Implementation
         public IBaseRepository<Review> ReviewRepository => _reviewRepository ??= new ReviewRepository(_context);
         public IBaseRepository<Category> CategoryRepository => _categoryRepository ??= new CategoryRepository(_context);
         public IBaseRepository<PaintingCategory> PaintingCategoryRepository => _paintingCategoryRepository ??= new PaintingCategoryRepository(_context);
+
+        public IBaseRepository<Blog> BlogRepository => _blogRepository ??= new BlogRepository(_context);
 
 
 
