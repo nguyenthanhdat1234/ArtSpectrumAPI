@@ -45,7 +45,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     };
 });
 
-
+// Add services Authoration for Project
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy => policy.RequireRole("admin", "Admin"));
+});
 //Add Validation && not use "ModelStateInvalidFilter"
 
 builder.Services.Configure<ApiBehaviorOptions>(opts =>
@@ -112,6 +116,7 @@ builder.Services.AddEndpointsApiExplorer();
 // Add JwtTokenBearer Support to Swagger
 builder.Services.AddSwaggerGen(c=>
 {
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "ArtSpectrum API", Version = "v1" });
     var securityScheme = new OpenApiSecurityScheme
     {
         Name = "JWT Authentication",
@@ -140,6 +145,7 @@ builder.Services.AddSwaggerGen(c=>
     };
 
     c.AddSecurityRequirement(securityRequirement);
+    
 });
 // Add Cors Policy
 builder.Services.AddCors(options =>
