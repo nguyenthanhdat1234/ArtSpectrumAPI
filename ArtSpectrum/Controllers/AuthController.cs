@@ -26,7 +26,7 @@ namespace ArtSpectrum.Controllers
             var user = await _service.Authenticate(request, new CancellationToken());
             if(user != null)
             {
-                var tokenString = _helper.GenerateJSONWebToken(request);
+                var tokenString = _helper.GenerateJSONWebToken(user);
                 var result = new LoginSuccessResponse
                 {
                     UserCredentials = new UserCredential
