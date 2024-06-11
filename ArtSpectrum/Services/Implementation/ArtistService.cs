@@ -28,7 +28,12 @@ namespace ArtSpectrum.Services.Implementation
             {
                 throw new Exception("This artist has already been taken.");
             }
+            var updateUser = await _uow.UserRepository.FirstOrDefaultAsync(x => x.UserId == request.UserId, cancellationToken);
 
+            if (updateUser is null) {
+                throw new ConflictException("User not found");
+            }
+            updateUser.Role = "Artist";
             var artistEntity = new Artist()
             {
                 UserId = request.UserId,
@@ -37,6 +42,7 @@ namespace ArtSpectrum.Services.Implementation
                 Approved = false,
             };
             var result = await _uow.ArtistsRepository.AddAsync(artistEntity);
+            var update = _uow.UserRepository.Update(updateUser);
 
             await _uow.Commit(cancellationToken);
             return _mapper.Map<ArtistDto>(result);

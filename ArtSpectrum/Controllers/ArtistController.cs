@@ -4,6 +4,7 @@ using ArtSpectrum.DTOs;
 using ArtSpectrum.Filters.ActionFilters;
 using ArtSpectrum.Services.Interface;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ArtSpectrum.Controllers
@@ -16,7 +17,6 @@ namespace ArtSpectrum.Controllers
         {
             _service = service;
         }
-
         [HttpGet]
         public async Task<ActionResult<Result<List<ArtistDto>>>> GetAllArtist()
         {
