@@ -1,4 +1,5 @@
-﻿using ArtSpectrum.Commons;
+﻿using ArtSpectrum.Attributes;
+using ArtSpectrum.Commons;
 using ArtSpectrum.Contracts.Request;
 using ArtSpectrum.DTOs;
 using ArtSpectrum.Filters.ActionFilters;
@@ -20,6 +21,7 @@ namespace ArtSpectrum.Controllers
         }
 
         [HttpGet]
+        [AdminAuthorize]
         public async Task<ActionResult<Result<List<UserDto>>>> GetAllUser()
         {
             var result = await _service.GetAll();
@@ -49,6 +51,7 @@ namespace ArtSpectrum.Controllers
         }
 
         [HttpDelete("{userId:int}")]
+        [AdminAuthorize]
         public async Task<ActionResult<Result<UserDto>>> DeleteUserById([FromRoute] int userId)
         {
             var result = await _service.DeleteUserByIdAsync(userId, new CancellationToken());

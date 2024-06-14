@@ -46,7 +46,7 @@ namespace ArtSpectrum.Services.Implementation
                 FullName = request.FullName,
                 Address = request.Address,
                 PhoneNumber = request.PhoneNumber,
-                Role = request.Role,
+                Role = "buyer",
             };
             var result = await _uow.UserRepository.AddAsync(userEntity);
 

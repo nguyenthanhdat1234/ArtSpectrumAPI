@@ -27,8 +27,6 @@ builder.Services.AddHttpClient();
 builder.Services.AddDbContext<ArtSpectrumDBContext>(options =>
        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// REGISTER a JWT authentication 
-builder.Services.AddScoped<GenerateJwtTokenFilter>();
 
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>

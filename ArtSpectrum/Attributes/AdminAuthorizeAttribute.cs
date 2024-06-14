@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ArtSpectrum.Repository.Extensions;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace ArtSpectrum.Attributes
@@ -9,7 +10,7 @@ namespace ArtSpectrum.Attributes
         {
             var user = context.HttpContext.User;
 
-            if (!user.Identity.IsAuthenticated || !user.IsInRole("Admin"))
+            if (!user.Identity.IsAuthenticated || !user.IsInRole("Admin", StringComparison.OrdinalIgnoreCase))
             {
                 context.Result = new JsonResult(new
                 {
