@@ -1,4 +1,5 @@
-﻿using ArtSpectrum.Repository.Models;
+﻿using ArtSpectrum.Extendsions;
+using ArtSpectrum.Repository.Models;
 using ArtSpectrum.Repository.Repositores.Interface;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -21,7 +22,7 @@ namespace ArtSpectrum.Repository.Repositores.Implementation
 
         public virtual async Task<List<T>> GetAll()
         {
-            return await _context.Set<T>().ToListAsync();
+            return await _context.Set<T>().OrderByIdDescending().ToListAsync();
         }
 
         public virtual async Task<T?> FirstOrDefaultAsync(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken)
