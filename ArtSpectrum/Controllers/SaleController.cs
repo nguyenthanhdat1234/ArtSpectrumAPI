@@ -1,4 +1,5 @@
-﻿using ArtSpectrum.Commons;
+﻿using ArtSpectrum.Attributes;
+using ArtSpectrum.Commons;
 using ArtSpectrum.Contracts.Request;
 using ArtSpectrum.DTOs;
 using ArtSpectrum.Services.Interface;
@@ -27,18 +28,21 @@ namespace ArtSpectrum.Controllers
             return Ok(Result<SaleDto>.Succeed(result));
         }
         [HttpPost]
+        [AdminAuthorize]
         public async Task<ActionResult<Result<SaleDto>>> CreateSale([FromBody] CreateSaleRequest request)
         {
             var result = await _service.CreateSaleAsync(request, new CancellationToken());
             return Ok(Result<SaleDto>.Succeed(result));
         }
         [HttpPut("{saleId:int}")]
+        [AdminAuthorize]
         public async Task<ActionResult<Result<SaleDto>>> UpdateSale(int saleId, UpdateSaleRequest request)
         {
             var result = await _service.UpdateSaleAsync(saleId, request, new CancellationToken());
             return Ok(Result<SaleDto>.Succeed(result));
         }
         [HttpDelete("{saleId:int}")]
+        [AdminAuthorize]
         public async Task<ActionResult<Result<SaleDto>>> DeleteSaleById([FromRoute] int saleId)
         {
             var result = await _service.DeleteSaleAsync(saleId, new CancellationToken());

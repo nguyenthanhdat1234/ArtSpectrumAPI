@@ -1,4 +1,5 @@
-﻿using ArtSpectrum.Commons;
+﻿using ArtSpectrum.Attributes;
+using ArtSpectrum.Commons;
 using ArtSpectrum.Contracts.Request;
 using ArtSpectrum.DTOs;
 using ArtSpectrum.Services.Interface;
@@ -26,18 +27,21 @@ namespace ArtSpectrum.Controllers
             return Ok(Result<CategoryDto>.Succeed(result));
         }
         [HttpPost]
+        [AdminAuthorize]
         public async Task<ActionResult<Result<CategoryDto>>> CreateCategory([FromBody] CreateCategoryRequest request)
         {
             var result = await _service.CreateCategoryAsync(request, new CancellationToken());
             return Ok(Result<CategoryDto>.Succeed(result));
         }
         [HttpPut("{categoryId:int}")]
+        [AdminAuthorize]
         public async Task<ActionResult<Result<CategoryDto>>> UpdateCategory(int categoryId, UpdateCategoryRequest request)
         {
             var result = await _service.UpdateCategoryAsync(categoryId, request, new CancellationToken());
             return Ok(Result<CategoryDto>.Succeed(result));
         }
         [HttpDelete("{categoryId:int}")]
+        [AdminAuthorize]
         public async Task<ActionResult<Result<CategoryDto>>> DeleteCategoryById([FromRoute] int categoryId)
         {
             var result = await _service.DeleteCategoryAsync(categoryId, new CancellationToken());
