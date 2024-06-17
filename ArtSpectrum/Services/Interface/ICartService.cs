@@ -1,4 +1,5 @@
 ﻿using ArtSpectrum.Contracts.Request;
+using ArtSpectrum.Contracts.Response;
 using ArtSpectrum.DTOs;
 using ArtSpectrum.Repository.Models;
 
@@ -6,7 +7,7 @@ namespace ArtSpectrum.Services.Interface
 {
     public interface ICartService
     {
-        Task<List<CartDto>> CreateCartAsync(CreateCartRequest request, CancellationToken cancellationToken);
+        Task<List<ResponseCart>> CreateCartAsync(CreateCartRequest request, CancellationToken cancellationToken);
         Task<List<CartDto>> GetAll();
 
         Task<List<CartDto>> GetCartByIdAsync(int cartId, CancellationToken cancellationToken);

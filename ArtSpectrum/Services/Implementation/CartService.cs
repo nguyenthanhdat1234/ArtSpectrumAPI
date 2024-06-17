@@ -1,4 +1,5 @@
 ﻿using ArtSpectrum.Contracts.Request;
+using ArtSpectrum.Contracts.Response;
 using ArtSpectrum.DTOs;
 using ArtSpectrum.Exceptions;
 using ArtSpectrum.Repository.Models;
@@ -19,7 +20,7 @@ namespace ArtSpectrum.Services.Implementation
             _mapper = mapper;
         }
 
-        public async Task<List<CartDto>> CreateCartAsync(CreateCartRequest request, CancellationToken cancellationToken)
+        public async Task<List<ResponseCart>> CreateCartAsync(CreateCartRequest request, CancellationToken cancellationToken)
         {
             
             var existingCarts = await _uow.CartRepository
@@ -58,7 +59,26 @@ namespace ArtSpectrum.Services.Implementation
             var createdCarts = await _uow.CartRepository
                 .WhereAsync(x => x.UserId == request.UserId, cancellationToken);
 
-            return _mapper.Map<List<CartDto>>(createdCarts);
+            List<ResponseCart> list = new List<ResponseCart>();
+            foreach (var cart in createdCarts)
+            {
+                var painting = await _uow.PaintingRepository.FirstOrDefaultAsync(x => x.PaintingId == cart.PaintingId);
+
+                var cartItem = new ResponseCart()
+                {
+                    UserId = cart.UserId,
+                    Title = painting.Title,
+                    Description = painting.Description,
+                    ImageUrl = painting.ImageUrl,
+                    Price = painting.Price,
+                    SalesPrice = painting.SalesPrice,
+                };
+
+                cartItem.PaintingQuantity.Add(new PaintingQuantity { PaintingId = cart.PaintingId, Quantity = cart.Quantity });
+                list.Add(cartItem);
+            }
+
+            return _mapper.Map<List<ResponseCart>>(list);
         }
 
 

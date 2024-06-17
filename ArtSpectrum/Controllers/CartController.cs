@@ -1,5 +1,6 @@
 ﻿using ArtSpectrum.Commons;
 using ArtSpectrum.Contracts.Request;
+using ArtSpectrum.Contracts.Response;
 using ArtSpectrum.DTOs;
 using ArtSpectrum.Services.Interface;
 using Microsoft.AspNetCore.Mvc;
@@ -30,10 +31,10 @@ namespace ArtSpectrum.Controllers
 
         [HttpPost]
         /*[ValidateRequest(typeof(CreateUserRequest))]*/
-        public async Task<ActionResult<Result<CartDto>>> CreateArtist([FromBody] CreateCartRequest request)
+        public async Task<ActionResult<Result<ResponseCart>>> CreateArtist([FromBody] CreateCartRequest request)
         {
             var result = await _service.CreateCartAsync(request, new CancellationToken());
-            return Ok(Result<List<CartDto>>.Succeed(result));
+            return Ok(Result<List<ResponseCart>>.Succeed(result));
         }
 
         [HttpPut("{cartId:int}")]
