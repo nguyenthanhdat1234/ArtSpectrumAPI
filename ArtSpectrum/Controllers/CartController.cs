@@ -23,10 +23,10 @@ namespace ArtSpectrum.Controllers
             return Ok(Result<List<CartDto>>.Succeed(result));
         }
         [HttpGet("{userId:int}")]
-        public async Task<ActionResult<Result<CartDto>>> GetArtistById([FromRoute] int userId)
+        public async Task<ActionResult<Result<ResponseCart>>> GetArtistById([FromRoute] int userId)
         {
             var result = await _service.GetCartByIdAsync(userId, new CancellationToken());
-            return Ok(Result<List<CartDto>>.Succeed(result));
+            return Ok(Result<List<ResponseCart>>.Succeed(result));
         }
 
         [HttpPost]

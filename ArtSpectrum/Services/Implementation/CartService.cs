@@ -103,16 +103,46 @@ namespace ArtSpectrum.Services.Implementation
             return _mapper.Map<List<CartDto>>(result);
         }
 
-        public async Task<List<CartDto>> GetCartByIdAsync(int userId, CancellationToken cancellationToken)
+        public async Task<List<ResponseCart>> GetCartByIdAsync(int userId, CancellationToken cancellationToken)
         {
-            var result = await _uow.CartRepository.WhereAsync(x => x.UserId == userId, cancellationToken);
+            List<ResponseCart> listResult = new List<ResponseCart>();
+            var cartList = await _uow.CartRepository.WhereAsync(x => x.UserId == userId, cancellationToken);
 
-            if (result is null)
+            if (cartList is null)
             {
                 throw new KeyNotFoundException("Cart not found.");
             }
+            foreach (var item in cartList)
+            {
+                var painting = await _uow.PaintingRepository.FirstOrDefaultAsync(x => x.PaintingId == item.PaintingId);
 
-            return _mapper.Map<List<CartDto>>(result);
+                if(painting is null)
+                {
+                    throw new ConflictException("Painting not found!");
+                }
+
+                listResult = new List<ResponseCart>
+                {
+                    new ResponseCart
+                    {
+                        UserId = item.UserId,
+                        Title = painting.Title,
+                        Description = painting.Description,
+                        ImageUrl = painting.ImageUrl,
+                        Price = painting.Price,
+                        SalesPrice = painting.SalesPrice,
+                        PaintingQuantity = new List<PaintingQuantity>
+                        {
+                            new PaintingQuantity()
+                            {
+                                 PaintingId = item.PaintingId,
+                                 Quantity = item.Quantity,
+                            }
+                        }
+                    },
+                };
+            }
+            return _mapper.Map<List<ResponseCart>>(listResult);
         }
 
         public async Task<CartDto> UpdateCartAsync(int cartId, UpdateCartRequest request, CancellationToken cancellationToken)
