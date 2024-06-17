@@ -21,11 +21,11 @@ namespace ArtSpectrum.Controllers
             var result = await _service.GetAll();
             return Ok(Result<List<CartDto>>.Succeed(result));
         }
-        [HttpGet("{cartId:int}")]
-        public async Task<ActionResult<Result<CartDto>>> GetArtistById([FromRoute] int cartId)
+        [HttpGet("{userId:int}")]
+        public async Task<ActionResult<Result<CartDto>>> GetArtistById([FromRoute] int userId)
         {
-            var result = await _service.GetCartByIdAsync(cartId, new CancellationToken());
-            return Ok(Result<CartDto>.Succeed(result));
+            var result = await _service.GetCartByIdAsync(userId, new CancellationToken());
+            return Ok(Result<List<CartDto>>.Succeed(result));
         }
 
         [HttpPost]
@@ -33,7 +33,7 @@ namespace ArtSpectrum.Controllers
         public async Task<ActionResult<Result<CartDto>>> CreateArtist([FromBody] CreateCartRequest request)
         {
             var result = await _service.CreateCartAsync(request, new CancellationToken());
-            return Ok(Result<CartDto>.Succeed(result));
+            return Ok(Result<List<CartDto>>.Succeed(result));
         }
 
         [HttpPut("{cartId:int}")]

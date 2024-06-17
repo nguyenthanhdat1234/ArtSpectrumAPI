@@ -1,5 +1,6 @@
 ﻿using ArtSpectrum.Contracts.Request;
 using ArtSpectrum.DTOs;
+using ArtSpectrum.Exceptions;
 using ArtSpectrum.Repository.Models;
 using ArtSpectrum.Repository.Repositores.Interface;
 using ArtSpectrum.Services.Interface;
@@ -18,27 +19,48 @@ namespace ArtSpectrum.Services.Implementation
             _mapper = mapper;
         }
 
-        public async Task<CartDto> CreateCartAsync(CreateCartRequest request, CancellationToken cancellationToken)
+        public async Task<List<CartDto>> CreateCartAsync(CreateCartRequest request, CancellationToken cancellationToken)
         {
-            var cart = await _uow.CartRepository.FirstOrDefaultAsync(x =>
-                x.UserId == request.UserId, cancellationToken);
+            
+            var existingCarts = await _uow.CartRepository
+                .WhereAsync(x => x.UserId == request.UserId && request.PaintingQuantity.Select(pq => pq.PaintingId).Contains(x.PaintingId), cancellationToken);
 
-            if (cart is not null)
+            if (existingCarts.Any())
             {
-                throw new Exception("This cart has already been taken.");
+                throw new ConflictException("Some paintings are already in the cart for this user.");
             }
 
-            var cartEntity = new Cart()
+            var cartEntities = new List<Cart>();
+
+            // Thêm các painting vào cart
+            foreach (var item in request.PaintingQuantity)
             {
-                UserId = request.UserId,
-                PaintingId = request.PaintingId,
-                Quantity = request.Quantity,
-            };
-            var result = await _uow.CartRepository.AddAsync(cartEntity);
+                var painting = await _uow.PaintingRepository.FirstOrDefaultAsync(x => x.PaintingId == item.PaintingId, cancellationToken);
+
+                if (painting == null)
+                {
+                    throw new ConflictException($"Painting with ID {item.PaintingId} not found.");
+                }
+
+                var cartEntity = new Cart
+                {
+                    UserId = request.UserId,
+                    PaintingId = item.PaintingId,
+                    Quantity = item.Quantity
+                };
+
+                cartEntities.Add(cartEntity);
+                await _uow.CartRepository.AddAsync(cartEntity, cancellationToken);
+            }
 
             await _uow.Commit(cancellationToken);
-            return _mapper.Map<CartDto>(result);
+
+            var createdCarts = await _uow.CartRepository
+                .WhereAsync(x => x.UserId == request.UserId, cancellationToken);
+
+            return _mapper.Map<List<CartDto>>(createdCarts);
         }
+
 
         public async Task<CartDto> DeleteCartByIdAsync(int cartId, CancellationToken cancellationToken)
         {
@@ -61,28 +83,31 @@ namespace ArtSpectrum.Services.Implementation
             return _mapper.Map<List<CartDto>>(result);
         }
 
-        public async Task<CartDto> GetCartByIdAsync(int cartId, CancellationToken cancellationToken)
+        public async Task<List<CartDto>> GetCartByIdAsync(int userId, CancellationToken cancellationToken)
         {
-            var result = await _uow.CartRepository.FirstOrDefaultAsync(x => x.CartId == cartId, cancellationToken);
+            var result = await _uow.CartRepository.WhereAsync(x => x.UserId == userId, cancellationToken);
 
             if (result is null)
             {
                 throw new KeyNotFoundException("Cart not found.");
             }
 
-            return _mapper.Map<CartDto>(result);
+            return _mapper.Map<List<CartDto>>(result);
         }
 
         public async Task<CartDto> UpdateCartAsync(int cartId, UpdateCartRequest request, CancellationToken cancellationToken)
         {
             var cart = await _uow.CartRepository.FirstOrDefaultAsync(x => x.CartId == cartId, cancellationToken);
-
+            var user = await _uow.UserRepository.FirstOrDefaultAsync(x => x.UserId == request.UserId, cancellationToken);
             if (cart is null)
             {
                 throw new KeyNotFoundException("Cart is not found.");
             }
+            if (user is null)
+            {
+                throw new KeyNotFoundException("User is not found.");
+            }
 
-            cart.UserId = request.UserId;
             cart.PaintingId = request.PaintingId;
             cart.Quantity = request.Quantity;
 
