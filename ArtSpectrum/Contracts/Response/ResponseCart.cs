@@ -4,6 +4,7 @@ namespace ArtSpectrum.Contracts.Response
 {
     public class ResponseCart
     {
+            public int CartId { get; set; }
             public int UserId { get; set; }
             public List<PaintingQuantity> PaintingQuantity { get; set; } = new List<PaintingQuantity>();
             public string Title { get; set; } = null!;

@@ -125,6 +125,7 @@ namespace ArtSpectrum.Services.Implementation
                 {
                     new ResponseCart
                     {
+                        CartId = item.CartId,
                         UserId = item.UserId,
                         Title = painting.Title,
                         Description = painting.Description,
