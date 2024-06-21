@@ -108,43 +108,45 @@ namespace ArtSpectrum.Services.Implementation
             List<ResponseCart> listResult = new List<ResponseCart>();
             var cartList = await _uow.CartRepository.WhereAsync(x => x.UserId == userId, cancellationToken);
 
-            if (cartList is null)
+            if (cartList == null || !cartList.Any())
             {
                 throw new KeyNotFoundException("Cart not found.");
             }
+
             foreach (var item in cartList)
             {
                 var painting = await _uow.PaintingRepository.FirstOrDefaultAsync(x => x.PaintingId == item.PaintingId);
 
-                if(painting is null)
+                if (painting == null)
                 {
                     throw new ConflictException("Painting not found!");
                 }
 
-                listResult = new List<ResponseCart>
+                var responseCart = new ResponseCart
                 {
-                    new ResponseCart
-                    {
-                        CartId = item.CartId,
-                        UserId = item.UserId,
-                        Title = painting.Title,
-                        Description = painting.Description,
-                        ImageUrl = painting.ImageUrl,
-                        Price = painting.Price,
-                        SalesPrice = painting.SalesPrice,
-                        PaintingQuantity = new List<PaintingQuantity>
-                        {
-                            new PaintingQuantity()
-                            {
-                                 PaintingId = item.PaintingId,
-                                 Quantity = item.Quantity,
-                            }
-                        }
-                    },
-                };
+                    CartId = item.CartId,
+                    UserId = item.UserId,
+                    Title = painting.Title,
+                    Description = painting.Description,
+                    ImageUrl = painting.ImageUrl,
+                    Price = painting.Price,
+                    SalesPrice = painting.SalesPrice,
+                    PaintingQuantity = new List<PaintingQuantity>
+            {
+                new PaintingQuantity
+                {
+                    PaintingId = item.PaintingId,
+                    Quantity = item.Quantity,
+                }
             }
+                };
+
+                listResult.Add(responseCart);
+            }
+
             return _mapper.Map<List<ResponseCart>>(listResult);
         }
+
 
         public async Task<CartDto> UpdateCartAsync(int cartId, UpdateCartRequest request, CancellationToken cancellationToken)
         {
