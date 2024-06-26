@@ -82,7 +82,7 @@ namespace ArtSpectrum.Services.Implementation
         }
 
 
-        public async Task<CartDto> DeleteCartByIdAsync(int cartId, CancellationToken cancellationToken)
+        public async Task<CartDto> DeleteCartByCartIdAsync(int cartId, CancellationToken cancellationToken)
         {
             var cart = await _uow.CartRepository.FirstOrDefaultAsync(x => x.CartId == cartId, cancellationToken);
             if (cart is null)
@@ -96,6 +96,31 @@ namespace ArtSpectrum.Services.Implementation
             }
             return _mapper.Map<CartDto>(cart);
         }
+
+        public async Task<List<CartDto>> DeleteCartByUserIdAsync(int userId, CancellationToken cancellationToken)
+        {
+            // Fetch the cart items for the specified user
+            var cartOfUser = await _uow.CartRepository.WhereAsync(x => x.UserId == userId);
+
+            // Check if there are any items in the cart
+            if (cartOfUser == null || !cartOfUser.Any())
+            {
+                throw new KeyNotFoundException("Cart not found.");
+            }
+
+            // Delete each item in the cart
+            foreach (var itemDelete in cartOfUser)
+            {
+                _uow.CartRepository.Delete(itemDelete);
+            }
+
+            // Commit the changes to the database
+            await _uow.Commit(cancellationToken);
+
+            // Map the deleted items to DTOs and return
+            return _mapper.Map<List<CartDto>>(cartOfUser);
+        }
+
 
         public async Task<List<CartDto>> GetAll()
         {

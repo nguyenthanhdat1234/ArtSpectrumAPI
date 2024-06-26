@@ -23,7 +23,7 @@ namespace ArtSpectrum.Controllers
             return Ok(Result<List<CartDto>>.Succeed(result));
         }
         [HttpGet("{userId:int}")]
-        public async Task<ActionResult<Result<ResponseCart>>> GetArtistById([FromRoute] int userId)
+        public async Task<ActionResult<Result<ResponseCart>>> GetCartById([FromRoute] int userId)
         {
             var result = await _service.GetCartByIdAsync(userId, new CancellationToken());
             return Ok(Result<List<ResponseCart>>.Succeed(result));
@@ -46,10 +46,17 @@ namespace ArtSpectrum.Controllers
         }
 
         [HttpDelete("{cartId:int}")]
-        public async Task<ActionResult<Result<CartDto>>> DeleteArtistById([FromRoute] int cartId)
+        public async Task<ActionResult<Result<CartDto>>> DeleteCartByCartId([FromRoute] int cartId)
         {
-            var result = await _service.DeleteCartByIdAsync(cartId, new CancellationToken());
+            var result = await _service.DeleteCartByCartIdAsync(cartId, new CancellationToken());
             return Ok(Result<CartDto>.Succeed(result));
+        }
+
+        [HttpDelete("delete-all/{userId}")]
+        public async Task<ActionResult<Result<List<CartDto>>>> DeleteCartByUserId([FromRoute] int userId)
+        {
+            var result = await _service.DeleteCartByUserIdAsync(userId, new CancellationToken());
+            return Ok(Result<List<CartDto>>.Succeed(result));
         }
     }
 }
