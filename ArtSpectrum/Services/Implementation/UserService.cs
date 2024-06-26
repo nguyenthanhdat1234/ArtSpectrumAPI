@@ -28,32 +28,60 @@ namespace ArtSpectrum.Services.Implementation
         }
         public async Task<UserDto> CreateUserAsync(CreateUserRequest request, CancellationToken cancellationToken)
         {
-            var user = await _uow.UserRepository.FirstOrDefaultAsync(x =>
-                x.Username.Trim().ToLower().Equals(request.Username.Trim().ToLower())
-                || x.Email.Trim().Equals(request.Email.Trim()),
-            cancellationToken);
+            // Kiểm tra xem username hoặc email đã tồn tại trong hệ thống chưa
+            var existingUser = await _uow.UserRepository.FirstOrDefaultAsync(x =>
+                x.Username.Trim().ToLower() == request.Username.Trim().ToLower()
+                || x.Email.Trim() == request.Email.Trim(),
+                cancellationToken);
 
-            if(user is not null)
+            if (existingUser != null)
             {
                 throw new Exception("This username/email has already been taken.");
             }
 
+            // Kiểm tra role có phải là "buyer" hoặc "artist"
+            string checkRole = request.Role.Trim().ToLower();
+            if (checkRole != "buyer" && checkRole != "artist")
+            {
+                throw new Exception("User must choose role BUYER or ARTIST");
+            }
+
+            // Tạo entity User mới
             var userEntity = new User()
             {
-                Username = request.Username,
-                Password = request.Password,
-                Email = request.Email,
-                FullName = request.FullName,
-                Address = request.Address,
-                PhoneNumber = request.PhoneNumber,
-                Role = "buyer",
+                Username = request.Username.Trim(),
+                Password = request.Password, // Chú ý: Hãy xem xét mã hóa mật khẩu trước khi lưu vào cơ sở dữ liệu
+                Email = request.Email.Trim(),
+                FullName = request.FullName.Trim(),
+                Address = request.Address?.Trim(), // Đảm bảo kiểm tra null trước khi trim
+                PhoneNumber = request.PhoneNumber?.Trim(), // Đảm bảo kiểm tra null trước khi trim
+                Role = checkRole, // Lưu role đã kiểm tra
             };
-            var result = await _uow.UserRepository.AddAsync(userEntity);
 
+            var addedUser = await _uow.UserRepository.AddAsync(userEntity);
             await _uow.Commit(cancellationToken);
-            return _mapper.Map<UserDto>(result);
 
+            if (checkRole == "artist")
+            {
+                var artist = new Artist()
+                {
+                    UserId = addedUser.UserId, 
+                    Bio = "", 
+                    ProfilePicture = "",
+                    Approved = true, 
+                };
+
+                await _uow.ArtistsRepository.AddAsync(artist);
+                await _uow.Commit(cancellationToken);
+            }
+
+            
+            
+
+            
+            return _mapper.Map<UserDto>(addedUser);
         }
+
 
         public async Task<UserDto> DeleteUserByIdAsync(int userId, CancellationToken cancellationToken)
         {
@@ -101,13 +129,18 @@ namespace ArtSpectrum.Services.Implementation
             {
                 throw new KeyNotFoundException("User is not found.");
             }
-
+            string checkrole = request.Role.Trim().ToLower();
+            if (checkrole != "buyer" && checkrole != "artist")
+            {
+                throw new Exception("User must choose role BUYER or ARTIST");
+            }
             user.Username = request.Username.Trim();
             user.Password = request.Password;
             user.Email = request.Email.Trim();
             user.Address = request.Address?.Trim();
             user.PhoneNumber = request.PhoneNumber?.Trim();
             user.FullName = request.FullName?.Trim();
+            user.Role = request.Role.Trim();
 
             _uow.UserRepository.Update(user);
             await _uow.Commit(cancellationToken);
