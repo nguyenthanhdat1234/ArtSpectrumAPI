@@ -12,6 +12,7 @@ namespace ArtSpectrum.Services.Implementation
 
         private readonly IUnitOfWork _uow;
         private IMapper _mapper;
+
         public OrderDetailService(IUnitOfWork uow, IMapper mapper)
         {
             _uow = uow;
@@ -80,6 +81,23 @@ namespace ArtSpectrum.Services.Implementation
             _uow.OrderDetailRepository.Update(orderDetail);
             await _uow.Commit(cancellationToken);
             return _mapper.Map<OrderDetailDto>(orderDetail);
+        }
+        public async Task<bool> RemovePaintingFromOrderDetailAsync(int paintingId, CancellationToken cancellationToken)
+        {
+            var cartsWithOrder = await _uow.OrderDetailRepository.WhereAsync(x => x.PaintingId == paintingId, cancellationToken);
+            bool removedFromAnyCart = false;
+
+            foreach (var orderDetail in cartsWithOrder)
+            {
+                _uow.OrderDetailRepository.Delete(orderDetail);
+                removedFromAnyCart = true;
+            }
+
+            if (removedFromAnyCart)
+            {
+                await _uow.Commit(cancellationToken);
+            }
+            return removedFromAnyCart;
         }
     }
 }
