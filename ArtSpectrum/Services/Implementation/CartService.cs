@@ -22,7 +22,7 @@ namespace ArtSpectrum.Services.Implementation
 
         public async Task<List<ResponseCart>> CreateCartAsync(CreateCartRequest request, CancellationToken cancellationToken)
         {
-            
+
             var existingCarts = await _uow.CartRepository
                 .WhereAsync(x => x.UserId == request.UserId && request.PaintingQuantity.Select(pq => pq.PaintingId).Contains(x.PaintingId), cancellationToken);
 
@@ -116,7 +116,7 @@ namespace ArtSpectrum.Services.Implementation
             {
                 var painting = await _uow.PaintingRepository.FirstOrDefaultAsync(x => x.PaintingId == item.PaintingId);
 
-                if(painting is null)
+                if (painting is null)
                 {
                     throw new ConflictException("Painting not found!");
                 }
@@ -168,5 +168,25 @@ namespace ArtSpectrum.Services.Implementation
 
             return _mapper.Map<CartDto>(cart);
         }
+
+        public async Task<bool> RemovePaintingFromAllCartsAsync(int paintingId, CancellationToken cancellationToken)
+        {
+            var cartsWithPainting = await _uow.CartRepository.WhereAsync(x => x.PaintingId == paintingId, cancellationToken);
+            bool removedFromAnyCart = false;
+
+            foreach (var cart in cartsWithPainting)
+            {
+                _uow.CartRepository.Delete(cart);
+                removedFromAnyCart = true;
+            }
+
+            if (removedFromAnyCart)
+            {
+                await _uow.Commit(cancellationToken);
+            }
+            return removedFromAnyCart;
+        }
     }
 }
+
+

@@ -13,5 +13,6 @@ namespace ArtSpectrum.Services.Interface
         Task<List<ResponseCart>> GetCartByIdAsync(int cartId, CancellationToken cancellationToken);
         Task<CartDto> UpdateCartAsync(int cartId, UpdateCartRequest request, CancellationToken cancellationToken);
         Task<CartDto> DeleteCartByIdAsync(int cartId, CancellationToken cancellationToken);
+        Task<bool> RemovePaintingFromAllCartsAsync(int paintingId, CancellationToken cancellationToken);
     }
 }
