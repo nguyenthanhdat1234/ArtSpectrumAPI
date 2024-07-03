@@ -195,5 +195,23 @@ namespace ArtSpectrum.Services.Implementation
 
             return _mapper.Map<CartDto>(cart);
         }
+        public async Task<bool> RemovePaintingFromAllCartsAsync(int paintingId, CancellationToken cancellationToken)
+        {
+            var cartsWithPainting = await _uow.CartRepository.WhereAsync(x => x.PaintingId == paintingId, cancellationToken);
+            bool removedFromAnyCart = false;
+
+            foreach (var cart in cartsWithPainting)
+            {
+                _uow.CartRepository.Delete(cart);
+                removedFromAnyCart = true;
+            }
+
+            if (removedFromAnyCart)
+            {
+                await _uow.Commit(cancellationToken);
+            }
+            return removedFromAnyCart;
+        }
+
     }
 }
