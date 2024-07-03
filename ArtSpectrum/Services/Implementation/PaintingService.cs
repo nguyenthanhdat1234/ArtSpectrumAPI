@@ -16,15 +16,16 @@ namespace ArtSpectrum.Services.Implementation
         private readonly IValidator<CreatePaintingRequest> _addPaintingValidator;
         private readonly IValidator<UpdatePaintingRequest> _updatePaintingValidator;
         private readonly ICartService _cartService;
+        private readonly IOrderDetailService _orderDetailService;
 
-
-        public PaintingService(IUnitOfWork uow, IMapper mapper, IValidator<CreatePaintingRequest> addPaintingValidator, IValidator<UpdatePaintingRequest> updatePaintingValidator, ICartService cartService)
+        public PaintingService(IUnitOfWork uow, IMapper mapper, IValidator<CreatePaintingRequest> addPaintingValidator, IValidator<UpdatePaintingRequest> updatePaintingValidator, ICartService cartService, IOrderDetailService orderDetailService)
         {
             _uow = uow;
             _mapper = mapper;
             _addPaintingValidator = addPaintingValidator;
             _updatePaintingValidator = updatePaintingValidator;
             _cartService = cartService;
+            _orderDetailService = orderDetailService;
         }
         public async Task<PaintingDto> CreatePaintingAsync(CreatePaintingRequest request, CancellationToken cancellationToken)
         {
@@ -62,6 +63,7 @@ namespace ArtSpectrum.Services.Implementation
             }
             else
             {
+                await _orderDetailService.RemovePaintingFromOrderDetailAsync(painting.PaintingId, cancellationToken);
                 await _cartService.RemovePaintingFromAllCartsAsync(painting.PaintingId, cancellationToken);
                 _uow.PaintingRepository.Delete(painting);
                 await _uow.Commit(cancellationToken);
