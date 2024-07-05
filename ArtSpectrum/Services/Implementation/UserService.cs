@@ -89,14 +89,51 @@ namespace ArtSpectrum.Services.Implementation
             if (user is null)
             {
                 throw new KeyNotFoundException("User not found.");
-            }
-            else
+            } else if(user.Role.ToLower() == "admin")
             {
-                _uow.UserRepository.Delete(user);
-                await _uow.Commit(cancellationToken);
+                throw new KeyNotFoundException("This account not delete.");
             }
+
+            var carts = await _uow.CartRepository.WhereAsync(x => x.UserId == user.UserId, cancellationToken);
+            if (carts.Any())
+            {
+                foreach (var cart in carts)
+                {
+                    _uow.CartRepository.Delete(cart);
+                }
+            }
+
+            var artist = await _uow.ArtistsRepository.FirstOrDefaultAsync(x => x.UserId == user.UserId, cancellationToken);
+            if (artist != null)
+            {
+                _uow.ArtistsRepository.Delete(artist);
+
+                var blogs = await _uow.BlogRepository.WhereAsync(x => x.ArtistId == artist.ArtistId, cancellationToken);
+                if (blogs.Any())
+                {
+                    foreach (var blog in blogs)
+                    {
+                        _uow.BlogRepository.Delete(blog);
+                    }
+                }
+            }
+
+            var reviews = await _uow.ReviewRepository.WhereAsync(x => x.UserId == user.UserId, cancellationToken);
+            if (reviews.Any())
+            {
+                foreach (var review in reviews)
+                {
+                    _uow.ReviewRepository.Delete(review);
+                }
+            }
+
+            _uow.UserRepository.Delete(user);
+
+            await _uow.Commit(cancellationToken);
+
             return _mapper.Map<UserDto>(user);
         }
+
 
         public async Task<List<UserDto>> GetAll()
         {
