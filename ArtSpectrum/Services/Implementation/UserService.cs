@@ -185,5 +185,43 @@ namespace ArtSpectrum.Services.Implementation
             return _mapper.Map<UserDto>(user);
 
         }
+
+        public async Task AddSampleUsersAsync(CancellationToken cancellationToken)
+        {
+            var sampleUsers = new List<CreateUserRequest>();
+            var roles = new[] { "BUYER", "ARTIST" };
+
+            for (int i = 1; i <= 100; i++)
+            {
+                var request = new CreateUserRequest
+                {
+                    Username = $"user{i}",
+                    Password = $"password{i}",
+                    Email = $"user{i}@example.com",
+                    FullName = $"User {i}",
+                    Address = $"Address {i}",
+                    PhoneNumber = $"{i:0000000000}",
+                    Role = roles[i % 2] // Alternates between "BUYER" and "ARTIST"
+                };
+                sampleUsers.Add(request);
+            }
+
+            foreach (var userRequest in sampleUsers)
+            {
+                try
+                {
+                    await CreateUserAsync(userRequest, cancellationToken);
+                    Console.WriteLine($"User {userRequest.Username} created successfully.");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error creating user {userRequest.Username}: {ex.Message}");
+                    // Log errors if necessary
+                }
+            }
+        }
+
     }
+
+
 }
