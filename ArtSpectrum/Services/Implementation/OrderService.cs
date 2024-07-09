@@ -18,6 +18,58 @@ namespace ArtSpectrum.Services.Implementation
             _mapper = mapper;
         }
 
+
+        public async Task<OrderDto> CompletedOrderStatus(int orderId, CancellationToken cancellationToken)
+        {
+            var order = await _uow.OrderRepository.FirstOrDefaultAsync(x => x.OrderId == orderId, cancellationToken);
+
+            if (order == null)
+            {
+                throw new KeyNotFoundException($"Order with ID {orderId} not found!");
+            }
+
+            if (order.Status.ToLower() == "completed")
+            {
+                throw new InvalidOperationException("Order is already completed.");
+            }
+
+            order.Status = "Completed";
+
+            _uow.OrderRepository.Update(order);
+            await _uow.Commit(cancellationToken);
+
+            var orderDetails = await _uow.OrderDetailRepository.WhereAsync(x => x.OrderId == orderId, cancellationToken);
+
+            foreach (var item in orderDetails)
+            {
+                var quantity = item.Quantity;
+                var product = await _uow.PaintingRepository.FirstOrDefaultAsync(x => x.PaintingId == item.PaintingId, cancellationToken);
+
+                if (product == null)
+                {
+                    throw new KeyNotFoundException($"Product with ID {item.PaintingId} not found.");
+                }
+
+                if (product.StockQuantity <= quantity)
+                {
+                    product.StockQuantity = 0;
+                }
+                else
+                {
+                    product.StockQuantity -= quantity;
+                }
+
+                _uow.PaintingRepository.Update(product);
+            }
+
+            await _uow.Commit(cancellationToken);
+
+            return _mapper.Map<OrderDto>(order);
+        }
+
+
+
+
         public async Task<OrderDto> CreateOrderAsync(CreateOrderRequest request, CancellationToken cancellationToken)
         {
             var order = await _uow.OrderRepository.FirstOrDefaultAsync(x => x.UserId == request.UserId);
@@ -48,6 +100,22 @@ namespace ArtSpectrum.Services.Implementation
             return _mapper.Map<OrderDto>(order);
         }
 
+        public async Task<OrderDto> FailuredOrderStatus(int orderId, CancellationToken cancellationToken)
+        {
+            var order = await _uow.OrderRepository.FirstOrDefaultAsync(x => x.OrderId == orderId, cancellationToken);
+
+            if (order == null)
+            {
+                throw new KeyNotFoundException($"Order with ID {orderId} not found!");
+            }
+
+            order.Status = "Canceled";
+
+            var result = _uow.OrderRepository.Update(order);
+            await _uow.Commit(cancellationToken);
+            return _mapper.Map<OrderDto>(result);
+        }
+
         public async Task<List<OrderDto>> GetAll()
         {
             var result = await _uow.OrderRepository.GetAll();
@@ -67,15 +135,24 @@ namespace ArtSpectrum.Services.Implementation
         public async Task<OrderDto> UpdateOrderAsync(int orderId, UpdateOrderRequest request, CancellationToken cancellationToken)
         {
             var order = await _uow.OrderRepository.FirstOrDefaultAsync(x => x.OrderId == orderId, cancellationToken);
-            if (order is null)
+
+            if (order == null)
             {
-                throw new KeyNotFoundException("Order not found. ");
+                throw new KeyNotFoundException($"Order with ID {orderId} not found.");
             }
+
+            if (order.Status.ToLower() == "completed")
+            {
+                throw new InvalidOperationException("Cannot update a completed order.");
+            }
+
             order.Status = request.Status;
 
             _uow.OrderRepository.Update(order);
             await _uow.Commit(cancellationToken);
+
             return _mapper.Map<OrderDto>(order);
         }
+
     }
 }

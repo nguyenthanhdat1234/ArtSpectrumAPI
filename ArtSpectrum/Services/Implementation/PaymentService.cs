@@ -80,8 +80,8 @@ namespace ArtSpectrum.Services.Implementation
                 buyerEmail = user.Email?.Trim() ?? string.Empty,
                 buyerPhone = user.PhoneNumber?.Trim() ?? string.Empty,
                 buyerAddress = user.Address?.Trim() ?? string.Empty,
-                cancelUrl = $"https://localhost:7219/api/v1/order/{orderId}",
-                returnUrl = $"https://localhost:7219/api/v1/order/{orderId}",
+                cancelUrl = "https://exe-202-tannhn1911s-projects.vercel.app/cart",
+                returnUrl = "https://exe-202-tannhn1911s-projects.vercel.app/cart",
                 expiredAt = (int)expirationTime.ToUnixTimeSeconds(), // Set the expiration time to be in the future
                 signature = "string",
                 items = new List<PaintingRequest>()
