@@ -122,6 +122,52 @@ namespace ArtSpectrum.Services.Implementation
             return _mapper.Map<List<OrderDto>>(result);
         }
 
+        public async Task<List<OrderSuccessfully>> GetAllOrderCompleted()
+        {
+            var listOrderSuccessfull = new List<OrderSuccessfully>();
+
+            try
+            {
+                var orderItemCompleted = await _uow.OrderRepository.WhereAsync(x => x.Status.ToLower().Equals("completed"));
+
+                foreach (var item in orderItemCompleted)
+                {
+                    var orderDetailCompleted = await _uow.OrderDetailRepository.WhereAsync(x => x.OrderId == item.OrderId);
+
+                    foreach (var itemOrderDetail in orderDetailCompleted)
+                    {
+                        var paintingId = itemOrderDetail.PaintingId;
+                        var painting = await _uow.PaintingRepository.FirstOrDefaultAsync(x => x.PaintingId == paintingId);
+                        var paintingName = painting?.Title ?? "Unknown";
+                        var user = await _uow.UserRepository.FirstOrDefaultAsync(x => x.UserId == item.UserId);
+                        var userName = user?.FullName ?? "Unknown";
+
+                        var orderDetailSucess = new OrderSuccessfully
+                        {
+                            OrderId = item.OrderId,
+                            OrderDate = item.OrderDate,
+                            UserId = item.UserId,
+                            UserName = userName,
+                            PaintingId = paintingId,
+                            PaintingName = paintingName,
+                            PriceAtOrderTime = itemOrderDetail.PriceAtOrderTime,
+                            Quantity = itemOrderDetail.Quantity,
+                            Status = item.Status,
+                        };
+
+                        listOrderSuccessfull.Add(orderDetailSucess);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("An error occurred while retrieving completed orders.", ex);
+            }
+
+            return listOrderSuccessfull;
+        }
+
+
         public async Task<OrderDto> GetOrderByIdAsync(int orderId, CancellationToken cancellationToken)
         {
             var result = await _uow.OrderRepository.FirstOrDefaultAsync(x => x.OrderId == orderId, cancellationToken);  

@@ -12,5 +12,6 @@ namespace ArtSpectrum.Services.Interface
         Task<OrderDto> DeleteOrderAsync(int orderId, CancellationToken cancellationToken);
         Task<OrderDto> CompletedOrderStatus(int orderId, CancellationToken cancellationToken);
         Task<OrderDto> FailuredOrderStatus(int orderId, CancellationToken cancellationToken);
+        Task<List<OrderSuccessfully>> GetAllOrderCompleted();
     }
 }

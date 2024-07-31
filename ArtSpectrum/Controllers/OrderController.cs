@@ -28,6 +28,15 @@ namespace ArtSpectrum.Controllers
             return Ok(Result<List<OrderDto>>.Succeed(result));
         }
 
+        [HttpGet]
+        [Route("GetOrderSuccessfull")]
+        [AdminAuthorize]
+        public async Task<ActionResult<Result<List<OrderSuccessfully>>>> GetAllOrderSuccessfully()
+        {
+            var result = await _service.GetAllOrderCompleted();
+            return Ok(Result<List<OrderSuccessfully>>.Succeed(result));
+        }
+
         [HttpGet("{orderId:int}")]
         public async Task<ActionResult<Result<OrderDto>>> GetOrderById([FromRoute] int orderId)
         {
@@ -79,7 +88,7 @@ namespace ArtSpectrum.Controllers
             }
         }
 
-        [HttpPost("complete/{orderId}")]
+        [HttpPut("complete/{orderId}")]
         public async Task<IActionResult> CompleteOrderStatus(int orderId, CancellationToken cancellationToken)
         {
             try
