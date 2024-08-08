@@ -14,6 +14,8 @@ namespace ArtSpectrum.DTOs
         public double? SalesPrice { get; set; }
         public int SaleId { get; set; }
         public int ArtistsId { get; set; }
+        public string? FullName { get; set; }
+
 
     }
 }

@@ -6,6 +6,7 @@ using ArtSpectrum.Repository.Repositores.Interface;
 using ArtSpectrum.Services.Interface;
 using AutoMapper;
 using FluentValidation;
+using System.Threading;
 
 namespace ArtSpectrum.Services.Implementation
 {
@@ -17,6 +18,7 @@ namespace ArtSpectrum.Services.Implementation
         private readonly IValidator<UpdatePaintingRequest> _updatePaintingValidator;
         private readonly ICartService _cartService;
         private readonly IOrderDetailService _orderDetailService;
+
 
         public PaintingService(IUnitOfWork uow, IMapper mapper, IValidator<CreatePaintingRequest> addPaintingValidator, IValidator<UpdatePaintingRequest> updatePaintingValidator, ICartService cartService, IOrderDetailService orderDetailService)
         {
@@ -74,18 +76,62 @@ namespace ArtSpectrum.Services.Implementation
         public async Task<List<PaintingDto>> GetAll()
         {
             var result = await _uow.PaintingRepository.GetAll();
-            return _mapper.Map<List<PaintingDto>>(result);  
+            var paintingDtos = new List<PaintingDto>();
+
+            foreach (var painting in result)
+            {
+                string artistFullName = null;
+
+                if (painting.ArtistsId != 0)
+                {
+                    var artist = await _uow.ArtistsRepository.FirstOrDefaultAsync(x => x.ArtistId == painting.ArtistsId);
+                    if (artist != null)
+                    {
+                        var user = await _uow.UserRepository.FirstOrDefaultAsync(x => x.UserId == artist.UserId);
+                        if (user != null)
+                        {
+                            artistFullName = user.FullName;
+                        }
+                    }
+                }
+
+                var paintingDto = _mapper.Map<PaintingDto>(painting);
+                paintingDto.FullName = artistFullName;
+
+                paintingDtos.Add(paintingDto);
+            }
+
+            return paintingDtos;
         }
 
         public async Task<PaintingDto> GetPaintingByIdAsync(int paintingId, CancellationToken cancellationToken)
         {
-            var result = await _uow.PaintingRepository.FirstOrDefaultAsync(x => x.PaintingId == paintingId, cancellationToken);
-            if (result is null)
+
+            var painting = await _uow.PaintingRepository.FirstOrDefaultAsync(x => x.PaintingId == paintingId, cancellationToken);
+            if (painting is null)
             {
-                throw new KeyNotFoundException("Painting not found. ");
+                throw new KeyNotFoundException("Painting not found.");
             }
-            return _mapper.Map<PaintingDto>(result);
-        
+
+            string artistFullName = null;
+
+            if (painting.ArtistsId != 0)
+            {
+                var artist = await _uow.ArtistsRepository.FirstOrDefaultAsync(x => x.ArtistId == painting.ArtistsId, cancellationToken);
+                if (artist != null)
+                {
+                    var user = await _uow.UserRepository.FirstOrDefaultAsync(x => x.UserId == artist.UserId, cancellationToken);
+                    if (user != null)
+                    {
+                        artistFullName = user.FullName;
+                    }
+                }
+            }
+
+            var paintingDto = _mapper.Map<PaintingDto>(painting);
+            paintingDto.FullName = artistFullName;
+
+            return paintingDto;
         }
 
         public async Task<PaintingDto> UpdatePaintingAsync(int paintingId, UpdatePaintingRequest request, CancellationToken cancellationToken)
